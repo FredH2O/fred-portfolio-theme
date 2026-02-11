@@ -1,9 +1,49 @@
+/* =====
+ Header styling 
+ ===== */
+
+/* header wrapper */
 .site-header {
   background-color: var(--color-primary);
   color: var(--color-bg);
 }
 
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  width: 100%;
+}
+
 .site-footer {
   background-color: var(--color-secondary);
   color: var(--color-primary);
+}
+
+.site-navigation ul {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.site-navigation {
+  display: none; /* mobile hidden */
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .site-navigation {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .site-header .container {
+    padding: 1.5rem 4rem;
+  }
 }
