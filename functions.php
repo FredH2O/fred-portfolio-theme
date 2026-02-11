@@ -1,5 +1,32 @@
 <?php
 
+function fred_enqueue_styles()
+{
+    wp_enqueue_style(
+        'fred-base',
+        get_template_directory_uri() . '/assets/css/base.css',
+        array(),
+        '1.0',
+        'all'
+    );
+
+    wp_enqueue_style(
+        'fred-layout',
+        get_template_directory_uri() . '/assets/css/layout.css',
+        array('fred-base'),
+        '1.0',
+        'all'
+    );
+
+    wp_enqueue_style(
+        'fred-components',
+        get_template_directory_uri() . '/assets/css/component.css',
+        array('fred-base', 'fred-layout'),
+        '1.0',
+        'all'
+    );
+}
+add_action('wp_enqueue_scripts', 'fred_enqueue_styles');
 function fred_portfolio_menus()
 {
     register_nav_menu('primary', __('Primary Menu', 'fred-portfolio'));
