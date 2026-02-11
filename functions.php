@@ -2,6 +2,14 @@
 
 function fred_enqueue_styles()
 {
+    // Google font
+    wp_enqueue_style(
+        'fred-google-fonts',
+        'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel=',
+        array(),
+        null,
+    );
+
     wp_enqueue_style(
         'fred-base',
         get_template_directory_uri() . '/assets/css/base.css',
