@@ -40,3 +40,15 @@ function fred_portfolio_menus()
     register_nav_menu('primary', __('Primary Menu', 'fred-portfolio'));
 }
 add_action('after_setup_theme', 'fred_portfolio_menus');
+
+function fred_enqueue_scripts()
+{
+    wp_enqueue_script(
+        'fred-main-js',
+        get_template_directory_uri() . '/assets/js/main.js',
+        array(),
+        '1.0',
+        true
+    );
+}
+add_action('wp_enqueue_scripts', 'fred_enqueue_scripts');
