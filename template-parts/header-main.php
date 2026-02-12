@@ -2,9 +2,7 @@
     <div class="container">
         <!-- Logo -->
         <div class="site-logo">
-            <a href="<?php echo home_url() ?>">
-                <?php bloginfo('name') ?>
-            </a>
+            <?php the_custom_logo(); ?>
         </div>
 
         <!-- Navigation -->

@@ -52,3 +52,10 @@ function fred_enqueue_scripts()
     );
 }
 add_action('wp_enqueue_scripts', 'fred_enqueue_scripts');
+
+function fred_theme_setup()
+{
+    add_theme_support('custom-logo');
+}
+
+add_action('after_setup_theme', 'fred_theme_setup');
