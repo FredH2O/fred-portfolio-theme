@@ -10,6 +10,14 @@ Reset / Normaliza
   --color-text: #30364f;
 }
 
+.dark-mode {
+  --color-primary: #e1d9bc;
+  --color-secondary: #6b7780;
+  --color-accent: #acbac4;
+  --color-bg: #1a1d2b;
+  --color-text: #f0f0db;
+}
+
 *,
 *::before,
 *::after {
@@ -53,6 +61,10 @@ body {
   line-height: 1.6;
   color: var(--color-text);
   background-color: var(--color-bg);
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
 }
 
 h1,
