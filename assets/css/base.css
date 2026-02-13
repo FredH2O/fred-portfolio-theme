@@ -31,7 +31,7 @@ ol {
 
 a {
   text-decoration: none;
-  color: var(--color-accent);
+  color: var(--color-text);
 }
 
 a:hover {
