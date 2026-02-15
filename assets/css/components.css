@@ -1,3 +1,43 @@
+/* components.css */
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-dark-shade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+}
+
+.hero-background-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-title {
+  position: relative;
+  z-index: 10;
+  color: var(--color-secondary);
+}
+
+/* generic button */
+
 .button {
   background-color: var(--color-accent);
   color: var(--color-primary);

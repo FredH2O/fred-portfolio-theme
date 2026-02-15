@@ -5,9 +5,9 @@ function fred_enqueue_styles()
     // Google font
     wp_enqueue_style(
         'fred-google-fonts',
-        'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel=',
+        'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap',
         array(),
-        null,
+        null
     );
 
     wp_enqueue_style(
@@ -28,7 +28,7 @@ function fred_enqueue_styles()
 
     wp_enqueue_style(
         'fred-components',
-        get_template_directory_uri() . '/assets/css/component.css',
+        get_template_directory_uri() . '/assets/css/components.css',
         array('fred-base', 'fred-layout'),
         '1.0',
         'all'
