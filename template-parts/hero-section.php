@@ -7,6 +7,7 @@
 
     <!-- Title -->
     <div class="hero-title">
-        <h1>Heading Test</h1>
+        <h1>Hey, I'm Fred 👋</h1>
+        <p>Junior Web Developer</p>
     </div>
 </section>

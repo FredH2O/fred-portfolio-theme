@@ -10,6 +10,7 @@
   overflow: hidden;
 }
 
+/* dark overlay */
 .hero-dark-shade {
   position: absolute;
   top: 0;
@@ -33,7 +34,7 @@
 .hero-title {
   position: relative;
   z-index: 10;
-  color: var(--color-secondary);
+  color: #fff;
 }
 
 /* generic button */
