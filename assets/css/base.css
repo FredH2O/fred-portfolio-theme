@@ -8,6 +8,7 @@ Reset / Normaliza
   --color-accent: #e1ddd1;
   --color-bg: #f0f0db;
   --color-text: #30364f;
+  --color-shade: rgba(0, 0, 0, 0.6);
 }
 
 .dark-mode {
@@ -16,6 +17,7 @@ Reset / Normaliza
   --color-accent: #acbac4;
   --color-bg: #1a1d2b;
   --color-text: #f0f0db;
+  --color-shade: rgba(0, 0, 0, 0.7);
 }
 
 *,
