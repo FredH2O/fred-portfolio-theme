@@ -8,6 +8,7 @@
   align-items: center;
   text-align: center;
   overflow: hidden;
+  padding: 0 1rem;
 }
 
 /* dark overlay */
@@ -29,6 +30,24 @@
   height: 100%;
   object-fit: cover;
   z-index: 1;
+}
+
+.content-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.hero-profile-pic img {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  z-index: 9999;
+  border: 2px solid white;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .hero-content {

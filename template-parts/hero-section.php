@@ -5,14 +5,21 @@
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hero-portfolio.jpg" alt="Hero Portfolio">
     </div>
 
-    <!-- Title -->
-    <div class="hero-content">
-        <h1>Hey, I'm Fred 👋</h1>
-        <p>Junior Web Developer turning ideas into clean, intuitive websites. I specialize in WordPress, PHP dashboards, and custom tools that make life easier for users. Curious, organized, and always building something new.</p>
-        <a href="<?php echo get_template_directory_uri(); ?>/assets/pdfs/FredCV2026.pdf"
-            class="btn-cv"
-            target="_blank"
-            download>Download CV
-        </a>
+    <!-- Content -->
+    <div class="content-container">
+        <div class="hero-profile-pic">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/profile-pic.png" alt="Profile Pic">
+        </div>
+
+        <div class="hero-content">
+            <h1>Hey, I'm Fred 👋</h1>
+            <p>Junior Web Developer turning ideas into clean, intuitive websites. I specialize in WordPress, PHP dashboards, and custom tools that make life easier for users. Curious, organized, and always building something new.</p>
+            <a href="<?php echo get_template_directory_uri(); ?>/assets/pdfs/FredCV2026.pdf"
+                class="btn-cv"
+                target="_blank"
+                download>Download CV
+            </a>
+        </div>
     </div>
+
 </section>
