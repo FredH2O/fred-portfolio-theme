@@ -59,3 +59,20 @@ function fred_theme_setup()
 }
 
 add_action('after_setup_theme', 'fred_theme_setup');
+
+function register_learning_cpt()
+{
+    $args = array(
+        'label' => 'Learning',
+        'public' => true,
+        'has_archive' => true,
+        'menu_icon' => 'dashicons-welcome-learn-more',
+        'rewrite' => array('slug' => 'learning'),
+        'supports' => array('title', 'thumbnail'),
+        'show_in_rest' => false
+    );
+
+    register_post_type('learning', $args);
+}
+
+add_action('init', 'register_learning_cpt');
