@@ -55,6 +55,9 @@
   border: 2px solid white;
   border-radius: 50%;
   object-fit: cover;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .hero-content {
