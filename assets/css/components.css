@@ -127,3 +127,66 @@
     text-align: start;
   }
 }
+
+/* learning page styling */
+
+/* Learning Archive */
+.learning-archive {
+  padding: 2rem;
+}
+
+.learning-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.learning-post {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-shade);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.learning-post:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.learning-post img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.post-title {
+  margin: 0.5rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.post-meta {
+  font-size: 0.875rem;
+  color: var(--color-secondary);
+}
+
+.post-tagline {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: var(--color-accent);
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
