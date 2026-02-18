@@ -11,12 +11,17 @@ $total_post = $wp_query->post_count;
 
 
     <?php if (have_posts()) : ?>
+
         <div class="learning-posts-flex">
+            <h2>Recently Posted</h2>
 
             <?php while (have_posts()) : the_post(); ?>
+
                 <?php $post_count++; ?>
+
                 <article class="learning-post">
-                    <h2>Recently Posted</h2>
+
+
 
                     <?php if (has_post_thumbnail()) : ?>
                         <a class="learning-thumbnail" href="<?php the_permalink(); ?>">
@@ -33,7 +38,7 @@ $total_post = $wp_query->post_count;
                     <p class="post-meta">
                         <?php echo get_the_date(); ?>
                         •
-                        <?php the_field('read_time'); ?>
+                        <?php the_field('read_time'); ?>min read
                     </p>
 
                     <?php if (get_field('tagline')) : ?>
@@ -44,9 +49,11 @@ $total_post = $wp_query->post_count;
 
                     <a class="read-more" href="<?php the_permalink(); ?>">Read More..</a>
                 </article>
+
                 <?php if ($post_count < $total_post) : ?>
                     <hr />
                 <?php endif; ?>
+
             <?php endwhile; ?>
 
         </div>
