@@ -76,3 +76,4 @@ function register_learning_cpt()
 }
 
 add_action('init', 'register_learning_cpt');
+add_theme_support('post-thumbnails');

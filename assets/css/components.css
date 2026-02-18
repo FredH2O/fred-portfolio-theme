@@ -128,17 +128,26 @@
   }
 }
 
-/* learning page styling */
-
 /* Learning Archive */
 .learning-archive {
-  padding: 2rem;
+  min-height: 100vh;
+  margin-top: 4rem;
+  border: 1px solid red;
+  padding: 1rem;
 }
 
-.learning-posts-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+.learning-posts-flex {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
   gap: 2rem;
+}
+
+.learning-thumbnail img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .learning-post {
@@ -151,15 +160,13 @@
     box-shadow 0.2s ease;
 }
 
+.learning-post h2 {
+  padding-bottom: 1rem;
+}
+
 .learning-post:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-}
-
-.learning-post img {
-  width: 100%;
-  height: auto;
-  border-radius: 0.5rem;
 }
 
 .post-title {
@@ -190,3 +197,5 @@
 .read-more:hover {
   text-decoration: underline;
 }
+
+/* learning page styling */
