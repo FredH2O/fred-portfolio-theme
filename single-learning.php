@@ -2,12 +2,16 @@
 
 ?>
 
-<main class="learning_single">
+<main class="learning-single">
 
     <!-- thumbnail -->
     <?php if (has_post_thumbnail()) : ?>
-        <?php echo the_post_thumbnail(); ?>
+        <div class="learning-single-thumbnail">
+            <?php echo the_post_thumbnail(); ?>
+        </div>
+
     <?php endif; ?>
+
 
     <!-- title -->
     <h1><?php the_title(); ?></h1>
@@ -16,15 +20,21 @@
     <p class="tagline"><?php the_field('tagline'); ?></p>
 
     <!-- date and read time -->
-    <p class="meta">
-        <?php echo get_the_date(); ?>
-        <?php the_field('read_time'); ?>
-    </p>
+    <div class="learning-single-meta">
+        <p><?php echo get_the_date(); ?></p>
+        /
+        <p><?php the_field('read_time'); ?> mins read</p>
+    </div>
 
     <!-- main content -->
     <section class="main-content">
         <?php the_field('main_content'); ?>
     </section>
+
+    <!-- tagline -->
+    <div class="learning-single-tagline">
+        <p><?php the_field('tag_line') ?></p>
+    </div>
 
     <!-- gallery images -->
     <?php
@@ -39,7 +49,7 @@
 
     // only show images if at least one exists
     if ($has_images) :
-        echo '<div class="gallery"';
+        echo '<div class="learning-single-gallery"';
         for ($i = 1; $i <= 5; $i++) {
             $image = get_field('image_' . $i);
             if ($image) {
