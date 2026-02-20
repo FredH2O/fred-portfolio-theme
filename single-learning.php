@@ -121,7 +121,7 @@
         for ($i = 1; $i <= 5; $i++) :
             $tech = get_field('tech_' . $i);
             if ($tech) :
-                echo '<div class="tech-stack"><p>' . esc_html($tech) . '</p></div>';
+                echo '<p class="tech-stack">' . esc_html($tech) . '</p>';
             endif;
         endfor;
 
