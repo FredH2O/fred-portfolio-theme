@@ -249,5 +249,36 @@
 }
 
 .learning-single-gallery img {
-  border: 0.5px solid var(--color-primary);
+  border-radius: 10px;
+}
+
+.secondary-content {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.reflection {
+  max-width: 700px;
+  margin: 1.5rem auto;
+  padding: 1.2rem 1.5rem;
+  background: var(--color-accent);
+  color: var(--color-secondary);
+  border-left: 4px solid var(--color-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.learning_single h3 {
+  max-width: 700px;
+  margin: 3rem auto 1rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.tech-stack-container {
+  display: flex;
+  gap: 1rem;
 }

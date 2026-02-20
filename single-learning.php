@@ -7,7 +7,7 @@
     <!-- thumbnail -->
     <?php if (has_post_thumbnail()) : ?>
         <div class="learning-single-thumbnail">
-            <?php echo the_post_thumbnail(); ?>
+            <?php the_post_thumbnail(); ?>
         </div>
 
     <?php endif; ?>
@@ -15,9 +15,6 @@
 
     <!-- title -->
     <h1><?php the_title(); ?></h1>
-
-    <!-- tagline -->
-    <p class="tagline"><?php the_field('tagline'); ?></p>
 
     <!-- date and read time -->
     <div class="learning-single-meta">
@@ -34,6 +31,7 @@
     <!-- tagline -->
     <div class="learning-single-tagline">
         <p><?php the_field('tag_line') ?></p>
+        <hr />
     </div>
 
     <!-- gallery images -->
@@ -49,7 +47,8 @@
 
     // only show images if at least one exists
     if ($has_images) :
-        echo '<div class="learning-single-gallery"';
+        echo '<h3>Gallery</h3>';
+        echo '<div class="learning-single-gallery">';
         for ($i = 1; $i <= 5; $i++) {
             $image = get_field('image_' . $i);
             if ($image) {
@@ -61,14 +60,20 @@
             }
         }
         echo '</div>';
+        echo '<hr/>';
     endif;
     ?>
 
 
     <!-- secondary content? -->
-    <section class="secondary-content">
-        <?php the_field('secondary_content') ?>
-    </section>
+    <?php $secondary_content = get_field('secondary_content') ?>
+    <?php if ($secondary_content) : ?>
+        <section class="secondary-content">
+            <?php echo wp_kses_post($secondary_content) ?>
+        </section>
+        <hr />
+    <?php endif; ?>
+
 
     <!-- reflection/learning notes -->
     <?php
@@ -99,6 +104,30 @@
 
 
     <!-- tech stack/icons? -->
+    <?php
+    $tech_stack = false;
+
+    for ($i = 1; $i <= 5; $i++) {
+        if (get_field('tech_' . $i)) {
+            $tech_stack = true;
+            break;
+        }
+    }
+
+    if ($tech_stack) {
+        echo '<h3>Tech Stack</h3>';
+        echo '<div class="tech-stack-container">';
+
+        for ($i = 1; $i <= 5; $i++) :
+            $tech = get_field('tech_' . $i);
+            if ($tech) :
+                echo '<div class="tech-stack"><p>' . esc_html($tech) . '</p></div>';
+            endif;
+        endfor;
+
+        echo '</div>';
+    }
+    ?>
 </main>
 
 <?php get_footer(); ?>
