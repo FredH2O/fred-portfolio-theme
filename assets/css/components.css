@@ -269,16 +269,14 @@
 .secondary-content {
   background-color: var(--color-secondary);
   color: var(--color-primary);
-  border-radius: 10px;
   padding: 1rem;
 }
 
 .reflection {
-  max-width: 700px;
   margin: 1rem auto;
   padding: 1.2rem 1.5rem;
-  background: var(--color-accent);
-  color: var(--color-secondary);
+  background: var(--color-shade);
+  color: var(--color-primary);
   border-left: 4px solid var(--color-secondary);
   font-size: 0.95rem;
   line-height: 1.6;
@@ -294,12 +292,15 @@
 
 .tech-stack-container {
   display: flex;
+  justify-content: start;
+  align-items: center;
   gap: 1rem;
 }
 
 .tech-stack {
   font-size: small;
-  font-weight: lighter;
+  font-weight: 500;
+  text-decoration: underline;
   font-style: italic;
 }
 
@@ -311,7 +312,6 @@
     gap: 1rem;
     max-width: 1200px;
     margin: 0 auto;
-    border: 1px solid red;
   }
 
   .learning-single-thumbnail {
@@ -330,5 +330,19 @@
   .learning-single-tagline p {
     border-left: 4px solid var(--color-primary);
     padding-left: 1rem;
+  }
+
+  .secondary-content {
+    border-left: 4px solid var(--color-primary);
+    text-align: center;
+    font-size: small;
+  }
+}
+
+@media (min-width: 768px) {
+  .learning-single-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 }
