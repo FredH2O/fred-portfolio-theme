@@ -62,8 +62,19 @@ add_action('after_setup_theme', 'fred_theme_setup');
 
 function register_learning_cpt()
 {
+    $labels = array(
+        'name' => 'Learnings',
+        'singular_name' => 'Learning',
+        'add_new' => 'Add New Learning',
+        'add_new_item' => 'Add New Learning Item',
+        'edit_item' => 'Edit Learning',
+        'new_item' => 'New Learning',
+        'view_item' => 'View Learning',
+        'not_found_in_trash' => 'No Learning Found in Trash'
+    );
+
     $args = array(
-        'label' => 'Learning',
+        'labels' => $labels,
         'public' => true,
         'has_archive' => true,
         'menu_icon' => 'dashicons-welcome-learn-more',
