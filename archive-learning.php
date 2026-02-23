@@ -41,6 +41,13 @@ $total_post = $wp_query->post_count;
                         <?php the_field('read_time'); ?>min read
                     </p>
 
+                    <?php
+                    $content = wp_trim_words(get_field('main_content'), 15, '...');
+                    if (!empty($content)) :
+                    ?>
+                        <p><?php echo wp_kses_post($content) ?></p>
+                    <? endif; ?>
+
                     <?php if (get_field('tagline')) : ?>
                         <p class="post-tagline">
                             <?php the_field('tagline'); ?>
@@ -56,17 +63,20 @@ $total_post = $wp_query->post_count;
 
             <?php endwhile; ?>
 
+            <?php
+            //Pagination
+
+            the_posts_pagination(array(
+                'mid_size' => 2,
+                'prev_text' => 'Prev',
+                'next_text' => 'Next',
+            ));
+            ?>
+
+
         </div>
 
-        <?php
-        //Pagination
 
-        the_posts_pagination(array(
-            'mid_size' => 2,
-            'prev_text' => 'Prev',
-            'next_text' => 'Next',
-        ));
-        ?>
 
     <?php else : ?>
         <p>No Learning Post found.</p>

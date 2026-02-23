@@ -88,3 +88,12 @@ function register_learning_cpt()
 
 add_action('init', 'register_learning_cpt');
 add_theme_support('post-thumbnails');
+
+function learning_archive_posts_per_page($query)
+{
+    if (!is_admin() && $query->is_main_query() && is_post_type_archive('learning')) {
+        $query->set('posts_per_page', 2);
+    }
+}
+
+add_action('pre_get_posts', 'learning_archive_posts_per_page');
