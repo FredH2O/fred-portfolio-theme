@@ -145,20 +145,44 @@
 }
 
 .learning-thumbnail img {
-  display: none;
   width: 100%;
   height: 350px;
   object-fit: cover;
   object-position: center;
 }
 
+.learning-post h2 {
+  margin-top: 1rem;
+}
+
 .learning-post {
+  position: relative;
   background-color: var(--color-bg);
-  padding: 1rem;
   border-radius: 0.5rem;
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
+  height: 100%;
+}
+
+.learning-posts-shade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.694);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.learning-posts-main-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  z-index: 2;
 }
 
 .learning-post h2 {

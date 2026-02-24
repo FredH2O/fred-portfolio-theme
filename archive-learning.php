@@ -22,39 +22,45 @@ $total_post = $wp_query->post_count;
                 <article class="learning-post">
 
 
+                    <div class="thumbnail-container">
+                        <?php if (has_post_thumbnail()) : ?>
+                            <a class="learning-thumbnail" href="<?php the_permalink(); ?>">
+                                <?php the_post_thumbnail(); ?>
+                            </a>
+                        <?php endif; ?>
+                    </div>
 
-                    <?php if (has_post_thumbnail()) : ?>
-                        <a class="learning-thumbnail" href="<?php the_permalink(); ?>">
-                            <?php the_post_thumbnail(); ?>
-                        </a>
-                    <?php endif; ?>
 
-                    <h2 class="post-title">
-                        <a href="<?php the_permalink(); ?>">
-                            <?php the_title(); ?>
-                        </a>
-                    </h2>
+                    <div class="learning-posts-shade"></div>
+                    <div class="learning-posts-main-container">
+                        <h2 class="post-title">
+                            <a href="<?php the_permalink(); ?>">
+                                <?php the_title(); ?>
+                            </a>
+                        </h2>
 
-                    <p class="post-meta">
-                        <?php echo get_the_date(); ?>
-                        •
-                        <?php the_field('read_time'); ?>min read
-                    </p>
-
-                    <?php
-                    $content = wp_trim_words(get_field('main_content'), 15, '...');
-                    if (!empty($content)) :
-                    ?>
-                        <p><?php echo wp_kses_post($content) ?></p>
-                    <? endif; ?>
-
-                    <?php if (get_field('tagline')) : ?>
-                        <p class="post-tagline">
-                            <?php the_field('tagline'); ?>
+                        <p class="post-meta">
+                            <?php echo get_the_date(); ?>
+                            •
+                            <?php the_field('read_time'); ?>min read
                         </p>
-                    <?php endif; ?>
 
-                    <a class="read-more" href="<?php the_permalink(); ?>">Read More..</a>
+                        <?php
+                        $content = wp_trim_words(get_field('main_content'), 15, '...');
+                        if (!empty($content)) :
+                        ?>
+                            <p><?php echo wp_kses_post($content) ?></p>
+                        <? endif; ?>
+
+                        <?php if (get_field('tagline')) : ?>
+                            <p class="post-tagline">
+                                <?php the_field('tagline'); ?>
+                            </p>
+                        <?php endif; ?>
+
+                        <a class="read-more" href="<?php the_permalink(); ?>">Read More..</a>
+                    </div>
+
                 </article>
 
                 <?php if ($post_count < $total_post) : ?>
