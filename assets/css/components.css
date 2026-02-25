@@ -2,6 +2,7 @@
 
 .hero-section {
   position: relative;
+  margin-top: 80px;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -130,7 +131,9 @@
 
 /* Learning Archive Page*/
 
-.learning-archive {
+.learning-archive-main-container {
+  background: inherit;
+  color: var(--color-primary);
   min-height: 100vh;
   margin-top: 4rem;
   padding: 1rem;
@@ -175,7 +178,7 @@
   z-index: 1;
 }
 
-.learning-posts-main-container {
+.learning-posts-meta-container {
   position: absolute;
   top: 0;
   left: 0;
@@ -183,6 +186,7 @@
   flex-direction: column;
   padding: 1rem;
   z-index: 2;
+  color: #fff;
 }
 
 .learning-post h2 {
@@ -202,20 +206,17 @@
 
 .post-meta {
   font-size: 0.875rem;
-  color: var(--color-secondary);
 }
 
 .post-tagline {
   margin-top: 0.5rem;
   font-style: italic;
-  color: var(--color-accent);
 }
 
 .read-more {
   display: inline-block;
   margin-top: 0.5rem;
-  font-weight: 600;
-  color: var(--color-primary);
+  font-weight: 500;
   text-decoration: none;
 }
 

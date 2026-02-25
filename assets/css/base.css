@@ -3,21 +3,31 @@ Reset / Normaliza
 ===== */
 
 :root {
-  --color-primary: #30364f;
-  --color-secondary: #acbac4;
-  --color-accent: #e1ddd1;
-  --color-bg: #f0f0db;
-  --color-text: #30364f;
-  --color-shade: rgba(0, 0, 0, 0.6);
+  --color-primary: #0f172a; /* deep navy */
+  --color-secondary: #334155; /* slate */
+  --color-accent: #f59e0b; /* warm gold */
+  --color-bg: #f8fafc;
+  --color-text: #0f172a;
+  --color-shade: rgba(0, 0, 0, 0.5);
+  --color-menu: rgba(0, 0, 0, 0.5);
+  --color-menu-text: #f8fafc;
+  --color-surface: #ffffff; /* cards / nav / footer */
+  --color-muted: #f1f5f9; /* subtle sections */
+  --color-border: #e2e8f0;
 }
 
 .dark-mode {
-  --color-primary: #e1d9bc;
-  --color-secondary: #6b7780;
-  --color-accent: #acbac4;
-  --color-bg: #1a1d2b;
-  --color-text: #f0f0db;
+  --color-primary: #f8fafc;
+  --color-secondary: #94a3b8;
+  --color-accent: #fbbf24;
+  --color-bg: #0f172a;
+  --color-text: #f8fafc;
   --color-shade: rgba(0, 0, 0, 0.7);
+  --color-menu: rgba(255, 255, 255, 0.829);
+  --color-menu-text: #0f172a;
+  --color-surface: #1e293b;
+  --color-muted: #111827;
+  --color-border: #334155;
 }
 
 *,
@@ -41,11 +51,11 @@ ol {
 
 a {
   text-decoration: none;
-  color: var(--color-accent);
+  color: var(--color-primary);
 }
 
 a:hover {
-  color: var(--color-accent);
+  color: var(--color-secondary);
 }
 
 /* =====

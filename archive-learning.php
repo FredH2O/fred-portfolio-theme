@@ -5,7 +5,7 @@ $post_count = 0;
 $total_post = $wp_query->post_count;
 ?>
 
-<main class="learning-archive">
+<main class="learning-archive-main-container">
 
     <h1>Learning Posts Journey</h1>
 
@@ -32,7 +32,7 @@ $total_post = $wp_query->post_count;
 
 
                     <div class="learning-posts-shade"></div>
-                    <div class="learning-posts-main-container">
+                    <div class="learning-posts-meta-container">
                         <h2 class="post-title">
                             <a href="<?php the_permalink(); ?>">
                                 <?php the_title(); ?>
@@ -42,7 +42,7 @@ $total_post = $wp_query->post_count;
                         <p class="post-meta">
                             <?php echo get_the_date(); ?>
                             •
-                            <?php the_field('read_time'); ?>min read
+                            <?php the_field('read_time'); ?> min read
                         </p>
 
                         <?php
