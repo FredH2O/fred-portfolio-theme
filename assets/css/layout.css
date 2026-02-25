@@ -146,7 +146,7 @@ button svg.active {
 
 .site-footer {
   padding: 2rem 1.5rem;
-  border-top: 1px solid var(--color-primary);
+  border-top: 1px solid var(--color-border);
   background: var(--color-muted);
   color: var(--color-primary);
   transition:

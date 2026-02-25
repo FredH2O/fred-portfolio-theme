@@ -1,13 +1,11 @@
 <?php
 get_header();
 global $wp_query;
-$post_count = 0;
-$total_post = $wp_query->post_count;
 ?>
 
 <main class="learning-archive-main-container">
 
-    <h1>Learning Posts Journey</h1>
+    <h1>Learning Journey</h1>
 
 
     <?php if (have_posts()) : ?>
@@ -17,14 +15,18 @@ $total_post = $wp_query->post_count;
 
             <?php while (have_posts()) : the_post(); ?>
 
-                <?php $post_count++; ?>
+                <?php
+                $read_time = get_field('read_time');
+                $tagline = get_field('tagline');
+                $main_content = get_field('main_content');
+                ?>
 
                 <article class="learning-post">
 
 
                     <div class="thumbnail-container">
                         <?php if (has_post_thumbnail()) : ?>
-                            <a class="learning-thumbnail" href="<?php the_permalink(); ?>">
+                            <a class="learning-thumbnail" href="<?php echo esc_url(get_permalink()); ?>">
                                 <?php the_post_thumbnail(); ?>
                             </a>
                         <?php endif; ?>
@@ -34,36 +36,38 @@ $total_post = $wp_query->post_count;
                     <div class="learning-posts-shade"></div>
                     <div class="learning-posts-meta-container">
                         <h2 class="post-title">
-                            <a href="<?php the_permalink(); ?>">
-                                <?php the_title(); ?>
+                            <a href="<?php echo esc_url(get_permalink()); ?>">
+                                <?php echo esc_html(get_the_title()); ?>
                             </a>
                         </h2>
 
                         <p class="post-meta">
-                            <?php echo get_the_date(); ?>
+                            <?php echo esc_html(get_the_date()); ?>
                             •
-                            <?php the_field('read_time'); ?> min read
+                            <?php echo esc_html($read_time) ?> min read
                         </p>
 
                         <?php
-                        $content = wp_trim_words(get_field('main_content'), 15, '...');
-                        if (!empty($content)) :
+                        if ($main_content) :
                         ?>
-                            <p><?php echo wp_kses_post($content) ?></p>
-                        <? endif; ?>
+                            <p><?php echo wp_kses_post(wp_trim_words($main_content, 15, '...')); ?></p>
+                        <?php endif; ?>
 
-                        <?php if (get_field('tagline')) : ?>
+                        <?php if ($tagline) : ?>
                             <p class="post-tagline">
-                                <?php the_field('tagline'); ?>
+                                <?php echo esc_html($tagline) ?>
                             </p>
                         <?php endif; ?>
 
-                        <a class="read-more" href="<?php the_permalink(); ?>">Read More..</a>
+                        <a class="read-more"
+                            href="<?php echo esc_url(get_permalink()); ?>">
+                            Read More..
+                        </a>
                     </div>
 
                 </article>
 
-                <?php if ($post_count < $total_post) : ?>
+                <?php if ($wp_query->current_post + 1 < $wp_query->post_count) : ?>
                     <hr />
                 <?php endif; ?>
 

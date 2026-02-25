@@ -82,7 +82,8 @@
 }
 
 .btn-cv {
-  background-color: var(--color-bg);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
   color: var(--color-text);
   border-radius: 5px;
   padding: 0.5rem 1rem;
@@ -135,7 +136,7 @@
   background: inherit;
   color: var(--color-primary);
   min-height: 100vh;
-  margin-top: 4rem;
+  margin-top: 7rem;
   padding: 1rem;
 }
 
@@ -166,6 +167,7 @@
     transform 0.2s ease,
     box-shadow 0.2s ease;
   height: 100%;
+  overflow: hidden;
 }
 
 .learning-posts-shade {
@@ -202,6 +204,11 @@
   margin: 0.5rem 0;
   font-size: 1.25rem;
   font-weight: 600;
+  color: #fff;
+}
+
+.post-title a {
+  color: #fff;
 }
 
 .post-meta {
@@ -218,6 +225,7 @@
   margin-top: 0.5rem;
   font-weight: 500;
   text-decoration: none;
+  color: #fff;
 }
 
 .read-more:hover {
@@ -245,7 +253,7 @@
 
 .learning-single-thumbnail {
   border-radius: 5px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--color-border);
   overflow: hidden;
   height: 300px;
   width: auto;
@@ -265,7 +273,7 @@
   flex-direction: row;
   color: var(--color-text);
   font-size: smaller;
-  font-weight: lighter;
+  font-weight: 400;
   gap: 1rem;
 }
 
@@ -278,7 +286,7 @@
 .learning-single-tagline p {
   padding: 1rem;
   text-align: center;
-  background: var(--color-secondary);
+  background: var(--color-surface);
   color: var(--color-primary);
 }
 
@@ -293,7 +301,7 @@
 }
 
 .secondary-content {
-  background-color: var(--color-secondary);
+  background-color: var(--color-surface);
   color: var(--color-primary);
   padding: 1rem;
 }
@@ -301,9 +309,9 @@
 .reflection {
   margin: 1rem auto;
   padding: 1.2rem 1.5rem;
-  background: var(--color-shade);
+  background: var(--color-surface);
   color: var(--color-primary);
-  border-left: 4px solid var(--color-secondary);
+  border-left: 4px solid var(--color-border);
   font-size: 0.95rem;
   line-height: 1.6;
 }
@@ -324,10 +332,8 @@
 }
 
 .tech-stack {
-  font-size: small;
+  font-size: 600;
   font-weight: 500;
-  text-decoration: underline;
-  font-style: italic;
 }
 
 @media (min-width: 1024px) {
@@ -353,12 +359,12 @@
   }
 
   .learning-single-tagline p {
-    border-left: 4px solid var(--color-primary);
+    border-left: 4px solid var(--color-border);
     padding-left: 1rem;
   }
 
   .secondary-content {
-    border-left: 4px solid var(--color-primary);
+    border-left: 4px solid var(--color-border);
     text-align: center;
     font-size: small;
   }
