@@ -8,7 +8,8 @@ Reset / Normaliza
   --color-accent: #f59e0b; /* warm gold */
   --color-bg: #f8fafc;
   --color-text: #0f172a;
-  --color-shade: rgba(0, 0, 0, 0.5);
+  --color-inverted: rgba(0, 0, 0, 0.9);
+  --color-inverted-text: rgba(255, 255, 255);
   --color-menu: rgba(0, 0, 0, 0.5);
   --color-menu-text: #f8fafc;
   --color-surface: #ffffff; /* cards / nav / footer */
@@ -22,7 +23,8 @@ Reset / Normaliza
   --color-accent: #fbbf24;
   --color-bg: #0f172a;
   --color-text: #f8fafc;
-  --color-shade: rgba(0, 0, 0, 0.7);
+  --color-inverted: rgba(255, 255, 255, 0.9);
+  --color-inverted-text: rgba(0, 0, 0);
   --color-menu: rgba(255, 255, 255, 0.829);
   --color-menu-text: #0f172a;
   --color-surface: #1e293b;
