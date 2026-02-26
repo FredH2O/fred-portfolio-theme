@@ -6,8 +6,10 @@
 get_header(); ?>
 
 <!-- Hero Section -->
+<main>
+    <?php get_template_part('template-parts/hero', 'section'); ?>
+</main>
 
-<?php get_template_part('template-parts/hero', 'section'); ?>
 
 
 <?php get_footer(); ?>

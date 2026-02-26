@@ -53,9 +53,25 @@ function fred_enqueue_scripts()
 }
 add_action('wp_enqueue_scripts', 'fred_enqueue_scripts');
 
+// theme supports
 function fred_theme_setup()
 {
     add_theme_support('custom-logo');
+    add_theme_support('post-thumbnails');
+    add_theme_support('title-tag');
+    add_theme_support('custom-logo');
+    add_theme_support('html5', [
+        'search-form',
+        'comment-form',
+        'comment-list',
+        'gallery',
+        'caption',
+        'style',
+        'script',
+    ]);
+    add_theme_support('automatic-feed-links');
+    add_theme_support('responsive-embeds');
+    add_image_size('about-image', 1200, 600, true);
 }
 
 add_action('after_setup_theme', 'fred_theme_setup');
@@ -88,22 +104,6 @@ function register_learning_cpt()
 }
 
 add_action('init', 'register_learning_cpt');
-
-// theme supports
-add_theme_support('post-thumbnails');
-add_theme_support('title-tag');
-add_theme_support('custom-logo');
-add_theme_support('html5', [
-    'search-form',
-    'comment-form',
-    'comment-list',
-    'gallery',
-    'caption',
-    'style',
-    'script',
-]);
-add_theme_support('automatic-feed-links');
-add_theme_support('responsive-embeds');
 
 function learning_archive_posts_per_page($query)
 {

@@ -2,7 +2,7 @@
 
 .hero-section {
   position: relative;
-  margin-top: 80px;
+  margin-top: 60px;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -130,6 +130,62 @@
   }
 }
 
+/* About Page */
+
+.about-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin-top: 10rem;
+}
+
+/* .about-page-container {
+  border: 1px solid red;
+} */
+
+.dummy-div {
+  height: 150px; /* adjust how much spacing you need */
+  /* optional: for debugging */
+  /* background: rgba(255,0,0,0.2); */
+}
+
+.about-intro {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.about-image-container img {
+  display: flex;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
+  height: 700px;
+  width: 600px;
+}
+
+.about-me {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  top: 25%;
+  left: 50%;
+  width: 600px;
+  text-align: center;
+  background: var(--color-inverted);
+  color: var(--color-inverted-text);
+  padding: 1rem;
+}
+
+.about-me h1 {
+  padding-bottom: 1rem;
+}
 /* Learning Archive Page*/
 
 .learning-archive-main-container {
