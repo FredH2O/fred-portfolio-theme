@@ -130,7 +130,7 @@
   }
 }
 
-/* About Page */
+/*************** About Page ******************/
 
 .about-page {
   display: flex;
@@ -138,15 +138,37 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  margin-top: 10rem;
+  margin: 3rem 0;
 }
 
-/* .about-page-container {
-  border: 1px solid red;
-} */
+.about-page hr {
+  margin: 2.5rem 0;
+}
+
+.about-page-container {
+  max-width: 1300px;
+  padding: 1rem;
+}
+
+.about-journey .container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+}
+
+.about-journey .container a {
+  color: var(--color-accent);
+  font-style: italic;
+  cursor: pointer;
+}
+
+.about-journey .container a:hover {
+  color: var(--color-secondary);
+}
 
 .dummy-div {
-  height: 150px; /* adjust how much spacing you need */
+  height: 1px; /* adjust how much spacing you need */
   /* optional: for debugging */
   /* background: rgba(255,0,0,0.2); */
 }
@@ -154,7 +176,7 @@
 .about-intro {
   position: relative;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   width: 100%;
@@ -163,29 +185,176 @@
 .about-image-container img {
   display: flex;
   overflow: hidden;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
-  height: 700px;
-  width: 600px;
+  height: 500px;
 }
 
 .about-me {
-  position: absolute;
+  position: block;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  top: 25%;
-  left: 50%;
-  width: 600px;
+  width: auto;
   text-align: center;
   background: var(--color-inverted);
   color: var(--color-inverted-text);
-  padding: 1rem;
+  padding: 1rem 1rem;
+  animation: slideIn 0.5s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .about-me h1 {
   padding-bottom: 1rem;
 }
+
+.about-values {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: var(--color-muted); /* subtle section background */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px var(--color-shade);
+  font-family: "Inter", sans-serif;
+  color: var(--color-text);
+}
+
+.about-values h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: var(--color-primary);
+}
+
+.about-values ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.about-values li {
+  background-color: var(--color-surface);
+  padding: 1rem 1.5rem;
+  border-left: 4px solid var(--color-accent);
+  border-radius: 6px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.about-values li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px var(--color-shade);
+}
+
+.about-values li strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 1.1rem;
+  color: var(--color-secondary);
+}
+
+.about-tech-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.about-tech-stack h2 {
+  padding-bottom: 1rem;
+}
+
+.tech-icons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.tech-icons-container img {
+  width: 80px;
+}
+
+/**** laptop screen above ****/
+@media (min-width: 1024px) {
+  .about-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 7.5rem 0;
+  }
+
+  .about-intro {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  .dummy-div {
+    height: 150px;
+    border: 1px solid green; /* adjust how much spacing you need */
+    /* optional: for debugging */
+    /* background: rgba(255,0,0,0.2); */
+  }
+
+  .about-page-container {
+    max-width: 1300px;
+    padding: 1rem;
+  }
+
+  .about-image-container img {
+    display: flex;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+    height: 43.75rem;
+    width: 37.5rem;
+  }
+
+  .about-me {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    top: 15%;
+    left: 50%;
+    width: 37.5rem;
+    text-align: center;
+    background: var(--color-inverted);
+    color: var(--color-inverted-text);
+    padding: 2rem 1rem;
+    animation: slideIn 0.5s ease-in-out forwards;
+  }
+
+  .tech-icons-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .tech-icons-container img {
+    width: 60px;
+  }
+}
+
 /* Learning Archive Page*/
 
 .learning-archive-main-container {

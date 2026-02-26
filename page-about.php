@@ -14,43 +14,65 @@ get_header();
             </div>
             <div class="dummy-div"></div>
             <div class="about-me">
-                <h1>This is me, Fred!</h1>
+                <h1>This is <span style="color: var(--color-accent); font-style: italic;">me</span>!</h1>
                 <p class="intro">
-                    I am a self-taught web developer with a deep passion for crafting clean, responsive, and highly functional digital experiences. I thrive on transforming ideas into intuitive, user-friendly interfaces while maintaining structured, maintainable code. Constantly curious and driven to learn, I enjoy exploring new technologies, refining my skills, and delivering solutions that not only work seamlessly but also delight users.
-                </p>
+                    I’m a self-taught web developer focused on building clean, responsive, and user-centered digital experiences. I enjoy turning ideas into structured, maintainable code while continuously refining my skills through real-world projects and hands-on learning.</p>
                 <p class="intro">
                     Along my journey as a self-taught developer, I’ve embraced every challenge as an opportunity to grow. From building small personal projects to contributing to real-world websites, I’ve learned the importance of thoughtful design, attention to detail, and creating experiences that are both functional and enjoyable. I value clean code, collaboration, and continuous learning, and I strive to bring these principles into every project I take on.
                 </p>
             </div>
         </section>
 
+        <hr />
+
         <!-- Journey -->
         <section class="about-journey">
             <div class="container">
-                <h2>My Journey</h2>
+                <h2>What I’m Building, Learning & <span style="color: var(--color-accent); font-style: italic;">Voluntary</span> Work</h2>
                 <p>
-                    I began by learning HTML, CSS, and JavaScript from scratch.
-                    Through consistent practice, voluntary work, and building real projects,
-                    I developed a strong foundation in frontend development.
+                    My current focus is front-end development within the WordPress ecosystem..
+                    building custom themes, working with PHP templates, and structuring reusable components. I enjoy creating clean layouts, improving performance, and ensuring responsive design across devices.
                 </p>
                 <p>
-                    Over time, I moved into WordPress, PHP, React, and TypeScript —
-                    not just to learn tools, but to understand how systems connect.
+                    Alongside my personal projects, I contribute through voluntary work. With <a href="https://greenhouseculture.ie/" target="_blank">Greenhouse Culture</a>, I support layout refinements and template structure adjustments including shaping how event pages are built and rendered.
+                    For <a href="https://hhtireland.org/" target="_blank">HHT Ireland </a>, I serve as a Web Editor, maintaining pages and posts while improving content structure and overall site usability.
                 </p>
             </div>
         </section>
 
+        <hr />
+
         <!-- Values -->
         <section class="about-values">
-            <div class="container">
-                <h2>What I Value</h2>
-                <ul>
-                    <li><strong>Clean Structure:</strong> Code that is readable and maintainable.</li>
-                    <li><strong>Thoughtful Design:</strong> Interfaces that feel natural and intentional.</li>
-                    <li><strong>Consistency:</strong> Spacing, hierarchy, and clarity.</li>
-                    <li><strong>Growth:</strong> Always improving through practice and feedback.</li>
-                </ul>
+
+            <h2>What I <span style="color: var(--color-accent); font-style: italic;">Value</span></h2>
+            <ul>
+                <li><strong>Clean Architecture:</strong> Structured, reusable code that scales and remains maintainable over time.</li>
+                <li><strong>User-Centered Design:</strong> Interfaces that prioritize clarity, accessibility, and intuitive interaction.</li>
+                <li><strong>Attention to Detail:</strong> Consistent spacing, typography, and visual hierarchy.</li>
+                <li><strong>Continuous Improvement:</strong> Learning through iteration, feedback, and real-world problem solving.</li>
+            </ul>
+
+        </section>
+
+        <hr />
+        <!-- Tech Stack -->
+
+        <section class="about-tech-stack">
+
+            <h2>Technologies I <span style="color: var(--color-accent); font-style: italic;">Work</span> With</h2>
+            <div class="tech-icons-container">
+                <img src="<?php echo get_template_directory_uri() . '/assets/images/HTML5.svg' ?>" alt="HTML5" title="HTML5">
+                <img src="<?php echo get_template_directory_uri() . '/assets/images/CSS3.svg' ?>" alt="CSS3" title="CSS3">
+                <img src="<?php echo get_template_directory_uri() . '/assets/images/JavaScript.svg' ?>" alt="JavaScript" title="JavaScript">
+                <img src="<?php echo get_template_directory_uri() . '/assets/images/PHP.svg' ?>" alt="PHP" title="PHP">
+                <img src="<?php echo get_template_directory_uri() . '/assets/images/WordPress.svg' ?>" alt="WordPress" title="WordPress">
+                <img src="<?php echo get_template_directory_uri() . '/assets/images/Git.svg' ?>" alt="Git" title="Git">
+                <img src="<?php echo get_template_directory_uri() . '/assets/images/React.svg' ?>" alt="React" title="React">
+                <img src="<?php echo get_template_directory_uri() . '/assets/images/TailwindCSS.svg' ?>" alt="Tailwind" title="Tailwind">
+                <img src="<?php echo get_template_directory_uri() . '/assets/images/VSCode.svg' ?>" alt="VSCode" title="VSCode">
             </div>
+
         </section>
     </div>
 
