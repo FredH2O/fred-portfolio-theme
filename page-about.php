@@ -74,6 +74,42 @@ get_header();
             </div>
 
         </section>
+
+        <!-- Certifications -->
+
+        <section class="about-certification">
+            <h2>My Current <span style="color: var(--color-accent); font-style: italic;">Certifications</span></h2>
+            <ul>
+                <li>
+                    <a href="https://www.udemy.com/certificate/UC-f4c81e7b-8093-4e2d-9f21-22f8d30c618a/" target="_blank">WordPress for Beginners: Create a Website Step by Step</a>
+                </li>
+                <li>
+                    <a href="https://www.udemy.com/certificate/UC-13d9af2f-ccc5-4cf3-933d-89e2e4c5a02d/" target="_blank">Mastering TypeScript - 2025 Edition</a>
+                </li>
+                <li>
+                    <a href="https://www.udemy.com/certificate/UC-015d3954-49b5-422e-83f4-f498189123e2/" target="_blank">React & TypeScript - The Practical Guide</a>
+                </li>
+                <li>
+                    <a href="https://www.udemy.com/certificate/UC-749986da-eeb3-42a4-a08a-e1e1f39d165f/" target="_blank">Tailwind CSS (+ React) - The beginner guide</a>
+                </li>
+                <li>
+                    <a href="https://www.udemy.com/certificate/UC-50c7ffec-e6c6-4258-8243-80446c0500f1/" target="_blank">React - The Complete Guide 2025 (incl. Next.js, Redux)</a>
+                </li>
+                <li>
+                    <a href="">IT Specialist - HTML and CSS
+
+                        Certiport - A Pearson VUE Business</a>
+                </li>
+                <li>
+                    <a href="">IT Specialist - JavaScript
+
+                        Certiport - A Pearson VUE Business</a>
+                </li>
+                <li>
+                    <a href="https://www.credly.com/badges/9b5e3e2f-c02c-4f9b-be7d-8d90114e89dc/linked_in_profile" target="_blank">CompTIA IT Fundamentals+ (ITF+) Certification</a>
+                </li>
+            </ul>
+        </section>
     </div>
 
 

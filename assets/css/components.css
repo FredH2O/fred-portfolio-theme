@@ -280,11 +280,27 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 3rem 0;
   gap: 1rem;
 }
 
 .tech-icons-container img {
   width: 80px;
+}
+
+.about-certification {
+  margin-top: 2.5rem;
+}
+
+.about-certification h2 {
+  padding-bottom: 1rem;
+}
+
+.about-certification ul {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 0;
+  gap: 1rem;
 }
 
 /**** laptop screen above ****/
@@ -352,6 +368,12 @@
 
   .tech-icons-container img {
     width: 60px;
+  }
+
+  .about-certification ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 }
 
