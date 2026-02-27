@@ -290,6 +290,7 @@
 
 .about-certification {
   margin-top: 2.5rem;
+  text-align: left;
 }
 
 .about-certification h2 {
@@ -299,7 +300,8 @@
 .about-certification ul {
   display: flex;
   flex-direction: column;
-  padding: 2.5rem 0;
+  list-style-type: disc;
+  padding: 2.5rem 1rem;
   gap: 1rem;
 }
 
@@ -325,7 +327,7 @@
 
   .dummy-div {
     height: 150px;
-    border: 1px solid green; /* adjust how much spacing you need */
+    border: 1px dotted var(--color-accent); /* adjust how much spacing you need */
     /* optional: for debugging */
     /* background: rgba(255,0,0,0.2); */
   }
@@ -351,7 +353,7 @@
     gap: 1rem;
     top: 15%;
     left: 50%;
-    width: 37.5rem;
+    width: 27.5rem;
     text-align: center;
     background: var(--color-inverted);
     color: var(--color-inverted-text);
@@ -375,6 +377,14 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
+
+  .about-certification {
+    margin-top: 2.5rem;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1024px) {
 }
 
 /* Learning Archive Page*/
