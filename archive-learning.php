@@ -5,8 +5,34 @@ global $wp_query;
 
 <main class="learning-archive-main-container">
 
-    <h1>Learning Journey</h1>
+    <div class="learning-archive-intro">
+        <h1 class="half-underline">Learning Journey</h1>
+        <p>This page documents my journey learning web development, WordPress, and PHP.
+            Here I share what I build, the problems I solve, and the lessons I learn along the way.
+        </p>
+    </div>
 
+    <div class="learning-current">
+        <h2>What I'm Currently Learning</h2>
+        <div class="current-learning-grid">
+
+            <div class="learning-box learning-1">
+                <p>WordPress Theme Development 🧑‍💻</p>
+            </div>
+
+            <div class="learning-box learning-2">
+                <p>PHP and WordPress Hooks 🪝</p>
+            </div>
+
+            <div class="learning-box learning-3">
+                <p>Custom Post Types & Advanced Custom Fields (ACF) 📃</p>
+            </div>
+
+            <div class="learning-bo learning-4">
+                <p>SEO Analysis and E-Commerce Optimization 🏪</p>
+            </div>
+        </div>
+    </div>
 
     <?php if (have_posts()) : ?>
 

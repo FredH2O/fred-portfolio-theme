@@ -397,6 +397,59 @@
   padding: 1rem;
 }
 
+.learning-archive-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  gap: 3rem;
+  border-left: 5px solid var(--color-accent);
+  background: var(--color-muted);
+}
+
+.half-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.half-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 50%;
+  height: 3px;
+  background: var(--color-accent);
+}
+
+.current-learning-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.learning-box {
+  border: 1px solid yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+}
+
+.learning-current {
+  padding: 1rem 2rem;
+}
+
+.learning-current ul {
+  list-style: none;
+  padding: 0;
+}
+
+.learning-current li::before {
+  content: "▹ ";
+  color: #555;
+}
+
 .learning-posts-flex {
   display: flex;
   flex-direction: column;
