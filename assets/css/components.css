@@ -280,11 +280,29 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 3rem 0;
   gap: 1rem;
 }
 
 .tech-icons-container img {
   width: 80px;
+}
+
+.about-certification {
+  margin-top: 2.5rem;
+  text-align: left;
+}
+
+.about-certification h2 {
+  padding-bottom: 1rem;
+}
+
+.about-certification ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: disc;
+  padding: 2.5rem 1rem;
+  gap: 1rem;
 }
 
 /**** laptop screen above ****/
@@ -309,7 +327,7 @@
 
   .dummy-div {
     height: 150px;
-    border: 1px solid green; /* adjust how much spacing you need */
+    border: 1px dotted var(--color-accent); /* adjust how much spacing you need */
     /* optional: for debugging */
     /* background: rgba(255,0,0,0.2); */
   }
@@ -335,7 +353,7 @@
     gap: 1rem;
     top: 15%;
     left: 50%;
-    width: 37.5rem;
+    width: 27.5rem;
     text-align: center;
     background: var(--color-inverted);
     color: var(--color-inverted-text);
@@ -353,6 +371,20 @@
   .tech-icons-container img {
     width: 60px;
   }
+
+  .about-certification ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .about-certification {
+    margin-top: 2.5rem;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1024px) {
 }
 
 /* Learning Archive Page*/
@@ -363,6 +395,116 @@
   min-height: 100vh;
   margin-top: 7rem;
   padding: 1rem;
+}
+
+.learning-archive-intro {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 3rem 8rem 3rem;
+  gap: 3rem;
+  background: var(--color-muted);
+  z-index: 2;
+  overflow: hidden;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.wave svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+.wave svg path:nth-child(1) {
+  fill: var(--color-surface); /* deep navy */
+}
+
+.wave svg path:nth-child(2) {
+  fill: rgba(15, 23, 42, 0.7); /* semi-transparent primary */
+}
+
+.wave svg path:nth-child(3) {
+  fill: rgba(15, 23, 42, 0.4); /* lighter transparency for depth */
+}
+
+@media (max-width: 768px) {
+  .learning-archive-intro {
+    padding: 1rem;
+  }
+
+  .wave svg {
+    width: 1000px;
+    height: 150px;
+  }
+}
+
+.half-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.half-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 50%;
+  height: 3px;
+  background: var(--color-accent);
+}
+
+.current-learning-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.learning-current {
+  padding: 2rem;
+  background: var(--color-muted);
+  border-radius: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.learning-current h2 {
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.learning-item {
+  margin-bottom: 1rem;
+}
+
+.learning-item span {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  color: var(--color-text);
+}
+
+.progress-bar {
+  background: var(--color-border);
+  border-radius: 999px;
+  height: 12px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--color-accent);
+  border-radius: 999px;
+  transition: width 0.5s ease-in-out;
 }
 
 .learning-posts-flex {
@@ -463,7 +605,11 @@
   }
 }
 
-/* learning page styling */
+/**************
+
+Learning page styling
+
+***************/
 
 .learning-single {
   display: flex;
@@ -602,3 +748,9 @@
     gap: 1rem;
   }
 }
+
+/****************
+
+Projects page styling
+
+*****************/
