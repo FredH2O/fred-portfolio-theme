@@ -105,6 +105,40 @@ function register_learning_cpt()
 
 add_action('init', 'register_learning_cpt');
 
+// custom post type - projects
+
+function register_projects_cpt()
+{
+    $labels = array(
+        'name'               => 'Projects',
+        'singular_name'      => 'Project',
+        'menu_name'          => 'Projects',
+        'add_new'            => 'Add New',
+        'add_new_item'       => 'Add New Project',
+        'edit_item'          => 'Edit Project',
+        'new_item'           => 'New Project',
+        'view_item'          => 'View Project',
+        'all_items'          => 'All Projects',
+        'search_items'       => 'Search Projects',
+        'not_found'          => 'No projects found',
+        'not_found_in_trash' => 'No projects found in Trash'
+    );
+
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'has_archive' => true,
+        'menu_icon' => 'dashicons-portfolio',
+        'rewrite' => array('slug' => 'projects'),
+        'show_in_rest' => false,
+        'supports' => array('title', 'editor', 'thumbnail')
+    );
+
+    register_post_type('project', $args);
+}
+
+add_action('init', 'register_projects_cpt');
+
 function learning_archive_posts_per_page($query)
 {
     if (!is_admin() && $query->is_main_query() && is_post_type_archive('learning')) {

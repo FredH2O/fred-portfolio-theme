@@ -605,7 +605,11 @@
   }
 }
 
-/* learning page styling */
+/**************
+
+Learning page styling
+
+***************/
 
 .learning-single {
   display: flex;
@@ -744,3 +748,9 @@
     gap: 1rem;
   }
 }
+
+/****************
+
+Projects page styling
+
+*****************/

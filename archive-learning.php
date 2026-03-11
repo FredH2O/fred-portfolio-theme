@@ -35,7 +35,7 @@ global $wp_query;
             <div class="learning-item">
                 <span>PHP and WordPress Hooks 🪝</span>
                 <div class="progress-bar">
-                    <div class="progress-fill" style="width: 70%;"></div>
+                    <div class="progress-fill" style="width: 60%;"></div>
                 </div>
             </div>
 
@@ -49,7 +49,7 @@ global $wp_query;
             <div class="learning-item">
                 <span>SEO & E-Commerce Optimization 🏪</span>
                 <div class="progress-bar">
-                    <div class="progress-fill" style="width: 50%;"></div>
+                    <div class="progress-fill" style="width: 40%;"></div>
                 </div>
             </div>
         </div>
