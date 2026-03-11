@@ -398,14 +398,54 @@
 }
 
 .learning-archive-intro {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 3rem;
+  padding: 3rem 3rem 8rem 3rem;
   gap: 3rem;
-  border-left: 5px solid var(--color-accent);
   background: var(--color-muted);
+  z-index: 2;
+  overflow: hidden;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.wave svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+.wave svg path:nth-child(1) {
+  fill: var(--color-surface); /* deep navy */
+}
+
+.wave svg path:nth-child(2) {
+  fill: rgba(15, 23, 42, 0.7); /* semi-transparent primary */
+}
+
+.wave svg path:nth-child(3) {
+  fill: rgba(15, 23, 42, 0.4); /* lighter transparency for depth */
+}
+
+@media (max-width: 768px) {
+  .learning-archive-intro {
+    padding: 1rem;
+  }
+
+  .wave svg {
+    width: 1000px;
+    height: 150px;
+  }
 }
 
 .half-underline {
@@ -428,26 +468,43 @@
   grid-template-columns: repeat(4, 1fr);
 }
 
-.learning-box {
-  border: 1px solid yellow;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 250px;
-}
-
 .learning-current {
-  padding: 1rem 2rem;
+  padding: 2rem;
+  background: var(--color-muted);
+  border-radius: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.learning-current ul {
-  list-style: none;
-  padding: 0;
+.learning-current h2 {
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
-.learning-current li::before {
-  content: "▹ ";
-  color: #555;
+.learning-item {
+  margin-bottom: 1rem;
+}
+
+.learning-item span {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  color: var(--color-text);
+}
+
+.progress-bar {
+  background: var(--color-border);
+  border-radius: 999px;
+  height: 12px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--color-accent);
+  border-radius: 999px;
+  transition: width 0.5s ease-in-out;
 }
 
 .learning-posts-flex {
