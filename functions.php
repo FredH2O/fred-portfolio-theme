@@ -144,7 +144,7 @@ function learning_archive_posts_per_page($query)
     if (!is_admin() && $query->is_main_query() && is_post_type_archive('learning')) {
         $query->set('posts_per_page', 2);
         $query->set('orderby', 'date');
-        $query->set('order', 'DESC'); // newest first
+        $query->set('order', 'DESC');
     }
 }
 

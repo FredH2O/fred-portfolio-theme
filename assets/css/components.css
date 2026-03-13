@@ -12,6 +12,10 @@
   padding: 0 1rem;
 }
 
+.hero-section p {
+  font-weight: 300;
+}
+
 /* dark overlay */
 .hero-dark-shade {
   position: absolute;
@@ -410,6 +414,10 @@
   overflow: hidden;
 }
 
+.learning-archive-intro p {
+  font-weight: 300;
+}
+
 .wave {
   position: absolute;
   bottom: 0;
@@ -754,3 +762,22 @@ Learning page styling
 Projects page styling
 
 *****************/
+
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100vh;
+  padding: 10rem 1rem;
+}
+
+.projects-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  gap: 1rem;
+}
+
+.projects-intro p {
+  font-weight: 300;
+  color: var(--color-primary);
+}

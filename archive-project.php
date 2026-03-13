@@ -1,6 +1,7 @@
 <?php get_header(); ?>
-<section class="projects-intro">
-    <div>
+
+<section class="projects-container">
+    <div class="projects-intro">
         <h1>Projects</h1>
         <p>
             I'm a passionate web developer. I like how code interacts with the webpage
@@ -11,6 +12,7 @@
         </p>
     </div>
 
+    <hr />
     <div>
 
     </div>
