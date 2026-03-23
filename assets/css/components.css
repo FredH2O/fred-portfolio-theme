@@ -790,7 +790,7 @@ Projects page styling
 .project-list {
   display: grid;
   grid-template-columns: 1;
-  padding-top: 5rem;
+  padding: 3rem 1rem;
   gap: 1rem;
   transform: translateX(0);
   transition: all 0.5s ease-in-out;
@@ -819,7 +819,14 @@ Projects page styling
 }
 
 .project {
-  transition: 1s all ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 1rem;
+}
+
+.project:hover {
+  background: var(--color-surface);
 }
 
 .project h2 {
@@ -827,13 +834,15 @@ Projects page styling
 }
 
 .project-description {
+  flex-grow: 1;
   padding-top: 1rem;
   text-align: left;
+  font-weight: lighter;
 }
 
 .pagination-projects a,
 .pagination-projects span {
-  padding: 8px 12px;
+  padding: 5px 12px;
   margin: 4px;
   border: 1px solid var(--color-surface);
   background-color: var(--color-muted);
@@ -844,6 +853,25 @@ Projects page styling
 .pagination-projects .current {
   background: var(--color-muted);
   color: var(--color-primary);
+}
+
+.project a {
+  text-decoration: none;
+  color: black;
+}
+
+.project-btn {
+  font-weight: 600;
+  background: var(--color-accent);
+  text-decoration: none;
+  color: var(--color-muted);
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.project-btn:hover {
+  transform: translateY(-2px);
+  transition: 0.5s all ease-in-out;
 }
 
 @media (min-width: 768px) {

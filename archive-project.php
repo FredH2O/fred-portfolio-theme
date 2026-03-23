@@ -20,6 +20,7 @@
         <div class="project-list">
 
             <?php if (have_posts()) : ?>
+
                 <?php while (have_posts()) : the_post(); ?>
 
                     <div class="project">
@@ -50,6 +51,10 @@
                             <?php endif; ?>
                         </div>
 
+                        <!-- button for the whole post -->
+                        <div>
+                            <a href="<?php the_permalink(); ?>" class="project-btn btn-primary"> See Details </a>
+                        </div>
 
                         <!-- image gallery -->
                         <!-- <div class="project-gallery">
@@ -71,7 +76,9 @@
 
                     </div> -->
                     </div>
+
                 <?php endwhile; ?>
+
             <?php else : ?>
                 <p>No projects found.</p>
             <?php endif; ?>
