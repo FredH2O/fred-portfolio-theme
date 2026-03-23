@@ -15,30 +15,44 @@
     <hr />
 
     <!-- display projects here -->
-    <div class="project-list">
 
-        <?php if (have_posts()) : ?>
-            <?php while (have_posts()) : the_post(); ?>
+    <div class="project-list-wrapper">
+        <div class="project-list">
 
-                <div class="project">
-                    <!-- thumbnail image -->
-                    <?php if (has_post_thumbnail()) : ?>
-                        <div class="project-thumbnail">
-                            <?php the_post_thumbnail('full'); ?>
+            <?php if (have_posts()) : ?>
+                <?php while (have_posts()) : the_post(); ?>
+
+                    <div class="project">
+                        <!-- thumbnail image -->
+                        <?php if (has_post_thumbnail()) : ?>
+                            <div class="project-thumbnail">
+                                <?php the_post_thumbnail('full'); ?>
+                            </div>
+                        <?php endif; ?>
+
+                        <!-- project title -->
+                        <?php $title = get_the_title(); ?>
+
+                        <?php if ($title) : ?>
+                            <h2> <?php echo esc_html($title); ?> </h2>
+                        <?php else : ?>
+                            <h2>No title</h2>
+                        <?php endif; ?>
+
+                        <!-- short description -->
+                        <div class="project-description">
+                            <?php
+                            $short_description = get_field('short_description');
+                            if ($short_description) : ?>
+                                <p><?php echo esc_html($short_description); ?></p>
+                            <?php else: ?>
+                                <p>No description available</p>
+                            <?php endif; ?>
                         </div>
-                    <?php endif; ?>
 
-                    <!-- short description -->
-                    <?php
-                    $short_description = get_field('short_description');
-                    if ($short_description) : ?>
-                        <p><?php echo esc_html($short_description); ?></p>
-                    <?php else: ?>
-                        <p>No description available</p>
-                    <?php endif; ?>
 
-                    <!-- image gallery -->
-                    <!-- <div class="project-gallery">
+                        <!-- image gallery -->
+                        <!-- <div class="project-gallery">
 
                         <?php
                         $image_1 = get_field('gallery_image_1');
@@ -56,14 +70,23 @@
                         ?>
 
                     </div> -->
-                </div>
-            <?php endwhile; ?>
-        <?php else : ?>
-            <p>No projects found.</p>
-        <?php endif; ?>
+                    </div>
+                <?php endwhile; ?>
+            <?php else : ?>
+                <p>No projects found.</p>
+            <?php endif; ?>
 
-
-
+        </div>
     </div>
+    <nav class="pagination-projects">
+        <?php echo paginate_links([
+            'total' => $wp_query->max_num_pages,
+            'prev_text' => '← Previous',
+            'next_text' => 'Next →',
+            'before_page_number' => '',
+            'after_page_number' => '',
+        ]); ?>
+    </nav>
+
 </section>
 <?php get_footer(); ?>

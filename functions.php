@@ -50,6 +50,19 @@ function fred_enqueue_scripts()
         '1.0',
         true
     );
+
+    wp_enqueue_script(
+        'projects-pagination',
+        get_template_directory_uri() . '/assets/js/projects-pagination.js',
+        array(),
+        '1.0',
+        true
+    );
+
+    // pass PHP data to JS
+    wp_localize_script('projects-pagination', 'portfolioData', [
+        'currentPage' => max(1, get_query_var('paged'))
+    ]);
 }
 add_action('wp_enqueue_scripts', 'fred_enqueue_scripts');
 
@@ -149,3 +162,15 @@ function learning_archive_posts_per_page($query)
 }
 
 add_action('pre_get_posts', 'learning_archive_posts_per_page');
+
+// pagination button for archive-project
+
+function limit_projects_per_page($query)
+{
+    if (!is_admin() && $query->is_main_query()) {
+        if (is_post_type_archive('project') || is_page('project')) {
+            $query->set('posts_per_page', 3);
+        }
+    }
+}
+add_action('pre_get_posts', 'limit_projects_per_page');
