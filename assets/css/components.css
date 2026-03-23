@@ -12,6 +12,10 @@
   padding: 0 1rem;
 }
 
+.hero-section p {
+  font-weight: 300;
+}
+
 /* dark overlay */
 .hero-dark-shade {
   position: absolute;
@@ -410,6 +414,10 @@
   overflow: hidden;
 }
 
+.learning-archive-intro p {
+  font-weight: 300;
+}
+
 .wave {
   position: absolute;
   bottom: 0;
@@ -754,3 +762,104 @@ Learning page styling
 Projects page styling
 
 *****************/
+
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: auto;
+  padding: 10rem 1rem;
+}
+
+.projects-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  gap: 1rem;
+}
+
+.projects-intro p {
+  font-weight: 300;
+  color: var(--color-primary);
+}
+
+.project-list-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: 1;
+  padding-top: 5rem;
+  gap: 1rem;
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+
+.project-list.slide-out-right {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.project-list.slide-out-left {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.project-thumbnail {
+  border-radius: 5px;
+  overflow: hidden;
+  height: 300px;
+}
+
+.project-thumbnail img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.project {
+  transition: 1s all ease-in-out;
+}
+
+.project h2 {
+  padding-top: 1rem;
+}
+
+.project-description {
+  padding-top: 1rem;
+  text-align: left;
+}
+
+.pagination-projects a,
+.pagination-projects span {
+  padding: 8px 12px;
+  margin: 4px;
+  border: 1px solid var(--color-surface);
+  background-color: var(--color-muted);
+  text-decoration: none;
+  transition: all 1s ease-in-out;
+}
+
+.pagination-projects .current {
+  background: var(--color-muted);
+  color: var(--color-primary);
+}
+
+@media (min-width: 768px) {
+  .project-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 5rem;
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 5rem;
+    gap: 1rem;
+  }
+}
