@@ -481,7 +481,7 @@
   background: var(--color-muted);
   border-radius: 1rem;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 2rem auto;
 }
 
 .learning-current h2 {
@@ -763,11 +763,39 @@ Projects page styling
 
 *****************/
 
+.project-section {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  width: 100%;
+  height: 100%; /* or any section height you want */
+}
+
 .projects-container {
   max-width: 1200px;
   margin: 0 auto;
-  height: auto;
   padding: 10rem 1rem;
+}
+
+.project-bg {
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  z-index: -1;
+}
+
+.project-shade {
+  position: absolute;
+  background-color: var(--color-shade);
+  inset: 0;
+  z-index: -1;
+}
+
+.project-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills the container, no gaps */
+  object-position: center; /* optional: adjust focus */
+  display: block;
 }
 
 .projects-intro {
@@ -778,8 +806,7 @@ Projects page styling
 }
 
 .projects-intro p {
-  font-weight: 300;
-  color: var(--color-primary);
+  font-weight: 400;
 }
 
 .project-list-wrapper {
@@ -826,7 +853,15 @@ Projects page styling
 }
 
 .project:hover {
-  background: var(--color-surface);
+  transform: translateY(-3px);
+  transition: 0.3s ease-in all;
+  background: rgba(0, 0, 0, 0.225);
+}
+
+.project {
+  background: rgba(0, 0, 0, 0.125);
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
 }
 
 .project h2 {
@@ -837,7 +872,7 @@ Projects page styling
   flex-grow: 1;
   padding-top: 1rem;
   text-align: left;
-  font-weight: lighter;
+  font-weight: 300;
 }
 
 .pagination-projects a,
@@ -857,16 +892,13 @@ Projects page styling
 
 .project a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
-.project-btn {
-  font-weight: 600;
-  background: var(--color-accent);
+.project-link {
+  display: block;
   text-decoration: none;
-  color: var(--color-muted);
-  border-radius: 3px;
-  padding: 10px;
+  color: inherit;
 }
 
 .project-btn:hover {
