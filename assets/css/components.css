@@ -12,6 +12,39 @@
   padding: 0 1rem;
 }
 
+.fred-wave {
+  display: inline-block;
+  transform-origin: 70% 70%; /* pivot like a wrist */
+  animation: wave 2s infinite;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(14deg);
+  }
+  30% {
+    transform: rotate(-8deg);
+  }
+  40% {
+    transform: rotate(14deg);
+  }
+  50% {
+    transform: rotate(-4deg);
+  }
+  60% {
+    transform: rotate(10deg);
+  }
+  70% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 .hero-section p {
   font-weight: 300;
 }
@@ -137,12 +170,43 @@
 /*************** About Page ******************/
 
 .about-page {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  margin: 3rem 0;
+  overflow: hidden;
+  padding: 5rem 0;
+}
+
+.about-page-background {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  border: 1px solid red;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.about-page-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-page-shade {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-shade);
+  z-index: -1;
+  width: 100%;
+  height: 100%;
 }
 
 .about-page hr {
@@ -156,6 +220,7 @@
 
 .about-journey .container {
   display: flex;
+  color: #fff;
   flex-direction: column;
   text-align: center;
   gap: 1rem;
@@ -274,6 +339,7 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  color: #fff;
 }
 
 .about-tech-stack h2 {
@@ -295,6 +361,7 @@
 .about-certification {
   margin-top: 2.5rem;
   text-align: left;
+  color: #fff;
 }
 
 .about-certification h2 {
@@ -309,6 +376,10 @@
   gap: 1rem;
 }
 
+.about-certification ul li a {
+  color: #fff;
+}
+
 /**** laptop screen above ****/
 @media (min-width: 1024px) {
   .about-page {
@@ -317,7 +388,6 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    margin: 7.5rem 0;
   }
 
   .about-intro {

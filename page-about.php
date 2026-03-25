@@ -4,6 +4,12 @@ get_header();
 
 <main class="about-page">
 
+    <div class="about-page-background">
+        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/circle-scatter.svg" alt="">
+    </div>
+
+    <div class="about-page-shade"></div>
+
     <!-- Hero Section -->
     <div class="about-page-container">
         <section class="about-intro">
