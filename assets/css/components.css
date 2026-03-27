@@ -464,11 +464,32 @@
 /* Learning Archive Page*/
 
 .learning-archive-main-container {
+  position: relative;
   background: inherit;
   color: var(--color-primary);
-  min-height: 100vh;
-  margin-top: 7rem;
-  padding: 1rem;
+  padding: 1rem 0;
+  z-index: 1;
+}
+
+.learning-bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  inset: 0;
+  z-index: -1;
+}
+
+.learning-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.learning-bg-shade {
+  position: absolute;
+  background: var(--color-shade);
+  inset: 0;
+  z-index: -1;
 }
 
 .learning-archive-intro {
@@ -477,53 +498,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 3rem 3rem 8rem 3rem;
+  margin-top: 5rem;
+  padding: 2rem;
   gap: 3rem;
-  background: var(--color-muted);
-  z-index: 2;
   overflow: hidden;
 }
 
 .learning-archive-intro p {
   font-weight: 300;
-}
-
-.wave {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: -1;
-}
-
-.wave svg {
-  display: block;
-  width: 100%;
-  height: auto;
   z-index: 1;
-}
-
-.wave svg path:nth-child(1) {
-  fill: var(--color-surface); /* deep navy */
-}
-
-.wave svg path:nth-child(2) {
-  fill: rgba(15, 23, 42, 0.7); /* semi-transparent primary */
-}
-
-.wave svg path:nth-child(3) {
-  fill: rgba(15, 23, 42, 0.4); /* lighter transparency for depth */
-}
-
-@media (max-width: 768px) {
-  .learning-archive-intro {
-    padding: 1rem;
-  }
-
-  .wave svg {
-    width: 1000px;
-    height: 150px;
-  }
 }
 
 .half-underline {
@@ -544,6 +527,10 @@
 .current-learning-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+}
+
+.learning-content-container {
+  padding: 1rem;
 }
 
 .learning-current {

@@ -109,7 +109,7 @@ function register_learning_cpt()
         'has_archive' => true,
         'menu_icon' => 'dashicons-welcome-learn-more',
         'rewrite' => array('slug' => 'learning'),
-        'supports' => array('title', 'thumbnail'),
+        'supports' => array('title', 'thumbnail', 'comments'),
         'show_in_rest' => false
     );
 
