@@ -128,6 +128,15 @@
         echo '</div>';
     }
     ?>
+
+    <hr />
+
+    <!-- comments section -->
+    <div class="learning-comments">
+        <h2>Comments Section</h2>
+        <?php comments_template(); ?>
+    </div>
+
 </main>
 
 <?php get_footer(); ?>
