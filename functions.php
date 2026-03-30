@@ -44,6 +44,14 @@ add_action('after_setup_theme', 'fred_portfolio_menus');
 function fred_enqueue_scripts()
 {
     wp_enqueue_script(
+        'scroll-to-top',
+        get_template_directory_uri() . '/assets/js/scroll-to-top.js',
+        array(),
+        '1.0',
+        true
+    );
+
+    wp_enqueue_script(
         'fred-main-js',
         get_template_directory_uri() . '/assets/js/main.js',
         array(),
