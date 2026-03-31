@@ -150,18 +150,29 @@ button svg.active {
   border-top: 1px solid var(--color-surface);
 }
 
+.site-footer h3 {
+  padding-bottom: 1rem;
+}
+
 .site-footer-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: 1rem;
+  padding: 5rem 1rem;
   max-width: 1200px;
   margin: 0 auto;
+  gap: 10rem;
 }
 
 .site-first-grid {
   gap: 1rem;
   display: flex;
+  align-items: center;
   flex-direction: column;
+}
+
+.footer-slogan {
+  font-weight: 300;
+  font-size: small;
 }
 
 .site-footer-detail-info {
@@ -179,32 +190,9 @@ button svg.active {
 .site-footer-detail-info p {
   margin-bottom: 0;
   font-weight: 500;
+  font-size: x-large;
   letter-spacing: 1.5px;
   padding-left: 0.5rem;
-}
-
-.footer-social-links {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  justify-content: left;
-  align-items: center;
-}
-
-.footer-social-links a {
-  padding: 3px;
-}
-
-.footer-back-to-top button {
-  width: auto;
-  border: 1px solid white;
-}
-
-.footer-back-to-top button svg {
-  width: 24px;
-  height: 24px;
-  stroke: #333; /* directly set stroke color */
-  transition: stroke 0.3s;
 }
 
 .footer-back-to-top {
@@ -212,7 +200,7 @@ button svg.active {
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
-  border: 1px solid var(--color-surface);
+  border: 1px solid var(--color-primary);
   color: var(--color-primary);
   max-width: 180px;
   cursor: pointer;
@@ -224,8 +212,8 @@ button svg.active {
 }
 
 .footer-back-to-top:hover {
-  background: var(--color-surface);
-  transform: translateY(-2px);
+  background: var(--color-secondary);
+  transform: translateY(-1px);
 }
 
 .footer-back-to-top .size-6 {
@@ -233,8 +221,59 @@ button svg.active {
   height: 24px;
 }
 
+.site-second-grid {
+  gap: 5rem;
+  display: flex;
+}
+
+.site-second-grid ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-weight: 300;
+  font-size: small;
+}
+
+.footer-social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: left;
+  align-items: center;
+}
+
+.footer-social-links a {
+  padding: 3px;
+}
+
+.footer-end {
+  background: var(--color-accent);
+}
+
+.footer-end p {
+  margin-bottom: 0;
+  text-align: center;
+  font-size: small;
+  font-weight: 300;
+  color: var(--color-inverted-text);
+  padding: 5px 0;
+}
+
 @media (max-width: 768px) {
   .site-footer-grid {
     grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .site-first-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3rem;
+  }
+
+  .site-second-grid {
+    display: flex;
+    justify-content: space-evenly;
   }
 }
