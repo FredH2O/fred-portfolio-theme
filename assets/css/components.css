@@ -1086,3 +1086,13 @@ Projects page styling
     gap: 1rem;
   }
 }
+
+/***************
+
+Single Project Page
+
+***************/
+
+.single-project-main-container {
+  padding: 15rem 0;
+}
