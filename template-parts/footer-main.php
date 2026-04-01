@@ -82,6 +82,6 @@
 
     <!-- all rights reserved bottom -->
     <div class="footer-end">
-        <p>Copyright &copy;<?php echo date('Y') ?>, fredcodes.com, All Rights Reserved.</p>
+        <p>Copyright &copy;<?php echo date('Y') ?>, <a href="<?php echo home_url(); ?>" class="footer-end-link-to-home">fredcodes.com</a>, All Rights Reserved.</p>
     </div>
 </footer>

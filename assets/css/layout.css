@@ -259,6 +259,16 @@ button svg.active {
   padding: 5px 0;
 }
 
+.footer-end-link-to-home {
+  text-decoration: underline;
+  color: var(--color-inverted-text);
+  font-style: italic;
+}
+
+.footer-end-link-to-home:hover {
+  color: var(--color-primary);
+}
+
 @media (max-width: 768px) {
   .site-footer-grid {
     grid-template-columns: 1fr;
