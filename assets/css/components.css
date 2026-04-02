@@ -1093,6 +1093,25 @@ Single Project Page
 
 ***************/
 
-.single-project-main-container {
-  padding: 15rem 0;
+.single-project-outer-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+  margin: 0 auto;
+  padding: 10rem 1rem;
+  max-width: 1200px;
+}
+
+.single-project-gallery-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap;
+  border: 1px solid red;
+  padding: 1rem;
+}
+
+.single-project-gallery-container img {
+  width: 100%;
+  max-width: 300px;
 }
