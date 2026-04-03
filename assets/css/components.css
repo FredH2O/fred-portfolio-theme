@@ -1093,12 +1093,19 @@ Single Project Page
 
 ***************/
 
+.single-project-inner-container {
+  text-align: center;
+}
+
+.single-project-inner-container p {
+  font-weight: 300;
+}
+
 .single-project-outer-container {
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
   margin: 0 auto;
-  padding: 10rem 1rem;
+  padding: 8rem 1rem;
   max-width: 1200px;
 }
 
@@ -1107,11 +1114,40 @@ Single Project Page
   flex-direction: row;
   gap: 1rem;
   flex-wrap: wrap;
-  border: 1px solid red;
   padding: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .single-project-gallery-container img {
-  width: 100%;
-  max-width: 300px;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* Lightbox buttons */
+.glightbox-clean .gclose,
+.glightbox-clean .gnext,
+.glightbox-clean .gprev {
+  background-color: var(--color-accent) !important;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ensure SVG icons inside buttons are fully visible */
+.glightbox-clean .gclose svg,
+.glightbox-clean .gnext svg,
+.glightbox-clean .gprev svg {
+  fill: var(--color-primary) !important;
+  opacity: 1 !important;
+}
+
+.glightbox img:hover {
+  transform: translateY(-2px);
+  transition: 0.3s all ease-in-out;
+  background-color: #ffffff46;
 }
