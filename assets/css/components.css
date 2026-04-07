@@ -180,12 +180,19 @@
   padding: 5rem 0;
 }
 
+.about-page h1 {
+  padding: 5rem 0 2rem 0;
+}
+
+.about-page p {
+  font-weight: 300;
+}
+
 .about-page-background {
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-
   border: 1px solid red;
   z-index: -1;
   width: 100%;

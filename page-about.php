@@ -4,6 +4,8 @@ get_header();
 
 <main class="about-page">
 
+    <h1>About <span style="color: var(--color-accent); font-style: italic;">Me</span></h1>
+
     <div class="about-page-background">
         <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/circle-scatter.svg" alt="">
     </div>
@@ -20,7 +22,6 @@ get_header();
             </div>
             <div class="dummy-div"></div>
             <div class="about-me">
-                <h1>This is <span style="color: var(--color-accent); font-style: italic;">me</span>!</h1>
                 <p class="intro">
                     I’m a self-taught web developer focused on building clean, responsive, and user-centered digital experiences. I enjoy turning ideas into structured, maintainable code while continuously refining my skills through real-world projects and hands-on learning.</p>
                 <p class="intro">
