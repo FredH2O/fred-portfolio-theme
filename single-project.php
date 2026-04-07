@@ -7,7 +7,7 @@
         <?php endif; ?>
 
         <?php if (get_the_content()) : ?>
-            <p><?php the_content(); ?></p>
+            <?php the_content(); ?>
         <?php endif; ?>
 
         <?php
@@ -18,6 +18,7 @@
         ]);
 
         if ($images_array) : ?>
+
             <h2>Screenshots</h2>
             <div class="single-project-gallery-container">
                 <?php foreach ($images_array as $image) : ?>
@@ -28,13 +29,41 @@
                     </a>
                 <?php endforeach; ?>
             </div>
+
         <?php endif; ?>
 
-        <h2>Functionality</h2>
+        <div class="project-functionality-challenges">
+            <h2>Functionality</h2>
+            <?php
+            $functionality = get_field('functionality');
 
-        <h2>Challanges</h2>
+            if ($functionality) : ?>
+                <?php echo esc_html($functionality); ?>
+            <?php endif; ?>
 
-        <h2>Call to Action</h2>
+            <h2>Challenges</h2>
+            <?php
+            $challenges = get_field('challenges');
+
+            if ($challenges) : ?>
+                <?php echo esc_html($challenges); ?>
+            <?php endif; ?>
+        </div>
+
+        <div class="project-call-to-action">
+            <?php
+
+            $link = get_field('page_link');
+
+            if ($link) : ?>
+
+                <a href="<?php echo esc_url($link['url']); ?>" target="<?php echo esc_attr($link['target'] ?: '_self'); ?>">
+                    <?php echo esc_html($link['title']); ?>
+                </a>
+
+            <?php endif; ?>
+        </div>
+
     </div>
 
 
