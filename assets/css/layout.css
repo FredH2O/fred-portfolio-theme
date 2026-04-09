@@ -10,6 +10,7 @@
   z-index: 1000;
   width: 100%;
   color: var(--color-primary);
+  transition: 0.3s all ease-in-out;
   background: var(--color-surface);
   border-bottom: 1px solid var(--color-secondary);
 }
@@ -49,6 +50,7 @@
   width: 70%;
   height: 100vh;
   background-color: var(--color-primary);
+  transition: 0.3s all ease-in-out;
   opacity: 0;
   overflow: hidden;
   z-index: 50;
@@ -64,6 +66,7 @@
 
 .site-navigation.active a {
   color: var(--color-bg);
+  transition: 0.3s all ease-in-out;
 }
 
 .menu-toggle {
@@ -149,6 +152,7 @@ button svg.active {
 .site-footer {
   border-top: 1px solid var(--color-secondary);
   background-color: var(--color-surface);
+  transition: 0.3s all ease-in-out;
 }
 
 .site-footer h3 {
@@ -214,6 +218,7 @@ button svg.active {
 
 .footer-back-to-top:hover {
   background: var(--color-secondary);
+  transition: 0.3s all ease-in-out;
   transform: translateY(-1px);
 }
 
@@ -249,6 +254,7 @@ button svg.active {
 
 .footer-end {
   background: var(--color-accent);
+  transition: 0.3s all ease-in-out;
 }
 
 .footer-end p {
@@ -257,17 +263,20 @@ button svg.active {
   font-size: small;
   font-weight: 300;
   color: var(--color-inverted-text);
+  transition: 0.3s all ease-in-out;
   padding: 5px 0;
 }
 
 .footer-end-link-to-home {
   text-decoration: underline;
   color: var(--color-inverted-text);
+  transition: 0.3s all ease-in-out;
   font-style: italic;
 }
 
 .footer-end-link-to-home:hover {
   color: var(--color-primary);
+  transition: 0.3s all ease-in-out;
 }
 
 @media (max-width: 768px) {
