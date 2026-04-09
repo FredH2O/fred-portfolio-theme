@@ -117,16 +117,17 @@ global $wp_query;
 
                 <?php endwhile; ?>
 
-                <?php
-                //Pagination
+                <div class="learning-pagination">
+                    <?php
+                    //Pagination
 
-                the_posts_pagination(array(
-                    'mid_size' => 2,
-                    'prev_text' => 'Prev',
-                    'next_text' => 'Next',
-                ));
-                ?>
-
+                    the_posts_pagination(array(
+                        'mid_size' => 2,
+                        'prev_text' => 'Prev',
+                        'next_text' => 'Next',
+                    ));
+                    ?>
+                </div>
 
             </div>
 

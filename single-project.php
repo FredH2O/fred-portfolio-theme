@@ -66,7 +66,26 @@
 
     </div>
 
+    <div>
+        <?php
+        $next_post = get_next_post();
+        $prev_post = get_previous_post();
+        ?>
 
+        <div class="single-project-prev-next-container">
+            <?php if ($prev_post): ?>
+                <a href="<?php echo get_permalink($prev_post->ID); ?>">
+                    ← Previous Post
+                </a>
+            <?php endif; ?>
+
+            <?php if ($next_post): ?>
+                <a href="<?php echo get_permalink($next_post->ID); ?>">
+                    Next Post →
+                </a>
+            <?php endif; ?>
+        </div>
+    </div>
 
 </section>
 <?php get_footer(); ?>
