@@ -48,12 +48,14 @@
     // only show images if at least one exists
     if ($has_images) :
         echo '<h3>Gallery</h3>';
-        echo '<div class="learning-single-gallery">';
+        echo '<div class="learning-single-gallery lightbox">';
         for ($i = 1; $i <= 5; $i++) {
             $image = get_field('image_' . $i);
             if ($image) {
                 if (is_array($image) && isset($image['url'])) {
-                    echo '<img src="' . esc_url($image['url']) . '" alt="' . esc_attr($image['alt']) . '">';
+                    echo '<a href="' . esc_url($image['url']) . '" class="glightbox">';
+                    echo '<img class="lightbox-img" src="' . esc_url($image['url']) . '" alt="' . esc_attr($image['alt']) . '">';
+                    echo '</a>';
                 } else {
                     echo '<img src="' . esc_url($image) . '" alt="Gallery Image">';
                 }
