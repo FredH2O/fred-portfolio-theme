@@ -581,7 +581,7 @@
 
 .learning-item span {
   display: block;
-  font-weight: 500;
+  font-weight: 300;
   margin-bottom: 0.3rem;
   color: var(--color-text);
   transition: 0.3s all ease-in-out;
@@ -925,6 +925,39 @@ Learning page styling
   margin-left: 0.5rem;
   font-size: 0.75rem;
   color: var(--color-secondary);
+  transition: 0.3s all ease-in-out;
+}
+
+.comment-respond h3 {
+  padding-bottom: 1rem;
+}
+
+.comment-form label {
+  display: flex;
+  padding-bottom: 1rem;
+}
+
+.comment-form textarea {
+  background-color: var(--color-surface);
+  transition: 0.3s all ease-in-out;
+  padding: 1rem;
+  font-weight: 500;
+}
+
+.comment-form input {
+  padding: 5px;
+  background-color: var(--color-border);
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  transition: 0.3s all ease-in-out;
+  cursor: pointer;
+}
+
+.comment-form input:hover {
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  transform: translateY(-2px);
+  transition: 0.3s all ease-in-out;
 }
 
 @media (min-width: 1024px) {

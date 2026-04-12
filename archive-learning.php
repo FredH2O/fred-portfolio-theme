@@ -49,6 +49,13 @@ global $wp_query;
                         <div class="progress-fill" style="width: 40%;"></div>
                     </div>
                 </div>
+
+                <div class="learning-item">
+                    <span>Russian Language 🪆</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 3%;"></div>
+                    </div>
+                </div>
             </div>
         </div>
 
