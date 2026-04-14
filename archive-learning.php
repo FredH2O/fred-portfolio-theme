@@ -50,12 +50,6 @@ global $wp_query;
                     </div>
                 </div>
 
-                <div class="learning-item">
-                    <span>Russian Language 🪆</span>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 3%;"></div>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -101,7 +95,7 @@ global $wp_query;
                             <?php
                             if ($main_content) :
                             ?>
-                                <p><?php echo wp_kses_post(wp_trim_words($main_content, 15, '...')); ?></p>
+                                <p class="post-short-description"><?php echo wp_kses_post(wp_trim_words($main_content, 15, '...')); ?></p>
                             <?php endif; ?>
 
                             <?php if ($tagline) : ?>
@@ -112,7 +106,7 @@ global $wp_query;
 
                             <a class="read-more"
                                 href="<?php echo esc_url(get_permalink()); ?>">
-                                Read More..
+                                Read More
                             </a>
                         </div>
 
