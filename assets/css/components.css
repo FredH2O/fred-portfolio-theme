@@ -1283,3 +1283,53 @@ Single Project Page
 .single-project-prev-next-container a {
   padding: 1rem;
 }
+
+/************************
+Contact Form / WPForm
+************************/
+
+.contact-form-main-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form-main-container span {
+  color: var(--color-accent);
+  font-style: italic;
+}
+
+.wpform-contact-me {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+div.wpforms-container-full .wpforms-field-sublabel,
+.wp-core-ui div.wpforms-container-full .wpforms-field-sublabel {
+  color: var(--color-primary);
+}
+
+div.wpforms-container-full .wpforms-field-label,
+.wp-core-ui div.wpforms-container-full .wpforms-field-label {
+  color: var(--color-primary);
+}
+
+div.wpforms-container-full input[type="submit"]:not(:hover):not(:active),
+div.wpforms-container-full button[type="submit"]:not(:hover):not(:active),
+div.wpforms-container-full .wpforms-page-button:not(:hover):not(:active),
+.wp-core-ui
+  div.wpforms-container-full
+  input[type="submit"]:not(:hover):not(:active),
+.wp-core-ui
+  div.wpforms-container-full
+  button[type="submit"]:not(:hover):not(:active),
+.wp-core-ui
+  div.wpforms-container-full
+  .wpforms-page-button:not(:hover):not(:active) {
+  background-color: var(--color-accent);
+  color: #000;
+}
