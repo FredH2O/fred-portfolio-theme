@@ -730,7 +730,6 @@
 
 .learning-pagination .current {
   background: var(--color-muted);
-  color: var(--color-primary);
   color: var(--color-accent);
 }
 
@@ -773,13 +772,17 @@ Learning page styling
   flex-direction: row;
   color: var(--color-text);
   font-size: smaller;
-  font-weight: 400;
+  font-weight: 300;
   gap: 1rem;
+}
+
+.single-learning-main-content p {
+  font-weight: 300;
 }
 
 .learning-single-tagline {
   font-size: small;
-  font-weight: light;
+  font-weight: 300;
   font-style: italic;
 }
 
@@ -792,17 +795,22 @@ Learning page styling
 
 .learning-single-gallery {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
   gap: 1rem;
+  padding: 1rem;
 }
 
 .learning-single-gallery img {
   border-radius: 10px;
+  object-fit: cover;
+  height: 300px;
 }
 
 .secondary-content {
-  background-color: var(--color-surface);
   color: var(--color-primary);
+  font-weight: 300;
   padding: 1rem;
 }
 
@@ -811,7 +819,9 @@ Learning page styling
   padding: 1.2rem 1.5rem;
   background: var(--color-surface);
   color: var(--color-primary);
-  border-left: 4px solid var(--color-border);
+  border-left: 4px solid var(--color-accent);
+  transition: 0.3s all ease-in-out;
+  font-weight: 300;
   font-size: 0.95rem;
   line-height: 1.6;
 }
@@ -920,7 +930,8 @@ Learning page styling
 .children {
   margin-left: 1.5rem;
   padding-left: 1rem;
-  border-left: 2px solid var(--color-border);
+  border-left: 2px solid var(--color-accent);
+  transition: 0.3s all ease-in-out;
 }
 
 .children .comment-body {
@@ -998,22 +1009,14 @@ Learning page styling
   }
 
   .learning-single-tagline p {
-    border-left: 4px solid var(--color-border);
+    border-left: 4px solid var(--color-accent);
+    transition: 0.3s all ease-in-out;
     padding-left: 1rem;
   }
 
   .secondary-content {
-    border-left: 4px solid var(--color-border);
     text-align: center;
-    font-size: small;
-  }
-}
-
-@media (min-width: 768px) {
-  .learning-single-gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    font-size: medium;
   }
 }
 

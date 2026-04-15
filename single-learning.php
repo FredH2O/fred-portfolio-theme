@@ -14,7 +14,7 @@
 
 
     <!-- title -->
-    <h1 style="color: var(--color-accent); font-style: italic;">
+    <h1>
         <?php the_title(); ?>
     </h1>
 
@@ -26,7 +26,7 @@
     </div>
 
     <!-- main content -->
-    <section class="main-content">
+    <section class="single-learning-main-content">
         <?php the_field('main_content'); ?>
     </section>
 
@@ -49,7 +49,7 @@
 
     // only show images if at least one exists
     if ($has_images) :
-        echo '<h3 style="color: var(--color-accent); font-style: italic;">Gallery</h3>';
+        echo '<h3>Gallery</h3>';
         echo '<div class="learning-single-gallery lightbox">';
         for ($i = 1; $i <= 5; $i++) {
             $image = get_field('image_' . $i);
@@ -94,7 +94,7 @@
 
     // only show heading and content if 1 reflection exists
     if ($has_reflection) :
-        echo '<h3 style="color: var(--color-accent); font-style: italic;">Reflection</h3>';
+        echo '<h3>Reflection</h3>';
 
         for ($i = 1; $i <= 5; $i++) {
             $reflection = get_field('reflection_' . $i);
@@ -119,7 +119,7 @@
     }
 
     if ($tech_stack) {
-        echo '<h3 style="color: var(--color-accent); font-style: italic;">Tech Stack</h3>';
+        echo '<h3>Tech Stack</h3>';
         echo '<div class="tech-stack-container">';
 
         for ($i = 1; $i <= 5; $i++) :
