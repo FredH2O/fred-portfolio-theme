@@ -1296,6 +1296,10 @@ Contact Form / WPForm
   align-items: center;
 }
 
+.contact-form-main-container h1 {
+  padding-bottom: 1rem;
+}
+
 .contact-form-main-container span {
   color: var(--color-accent);
   font-style: italic;
