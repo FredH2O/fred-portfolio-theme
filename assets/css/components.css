@@ -1,15 +1,21 @@
 /* components.css */
 
+:root {
+  --nav-height: 35px;
+}
+
 .hero-section {
   position: relative;
-  margin-top: 60px;
-  height: 100vh;
+  margin-top: var(--nav-height);
+  height: calc(100vh - var(--nav-height)); /* fallback */
+  height: calc(100dvh - var(--nav-height)); /* modern */
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   overflow: hidden;
-  padding: 0 1rem;
+  padding-inline: 1rem;
 }
 
 .fred-wave {
@@ -189,6 +195,7 @@
 
 .about-page h1 {
   padding: 5rem 0 2rem 0;
+  color: #fff;
 }
 
 .about-page p {
