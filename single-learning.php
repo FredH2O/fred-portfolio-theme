@@ -136,10 +136,8 @@
     <hr />
 
     <!-- comments section -->
-    <div class="learning-comments">
-        <h2>Comments Section</h2>
-        <?php comments_template(); ?>
-    </div>
+    <?php comments_template(); ?>
+
 
 </main>
 

@@ -212,3 +212,18 @@ function fred_enqueue_glightbox()
 }
 
 add_action('wp_enqueue_scripts', 'fred_enqueue_glightbox');
+
+/**
+ * Remove website field from comment form
+ * 
+ * @param array $fields
+ * @return array
+ */
+
+function fred_theme_comment_website_field($fields)
+{
+    unset($fields['url']);
+    return $fields;
+}
+
+add_filter('comment_form_default_fields', 'fred_theme_comment_website_field');

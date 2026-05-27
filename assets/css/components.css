@@ -975,6 +975,8 @@ Learning page styling
   transition: 0.3s all ease-in-out;
   padding: 1rem;
   font-weight: 500;
+  font-size: large;
+  color: var(--color-primary);
 }
 
 .comment-form input {
@@ -1343,4 +1345,54 @@ div.wpforms-container-full .wpforms-page-button:not(:hover):not(:active),
   .wpforms-page-button:not(:hover):not(:active) {
   background-color: var(--color-accent);
   color: #000;
+}
+
+/***** 404 Page ******/
+
+.error-404 {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.error-404__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 500px;
+}
+
+.error-404__image {
+  width: 280px;
+  max-width: 100%;
+  margin-bottom: 30px;
+}
+
+.error-404__title {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.error-404__text {
+  color: #666;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.error-404__button {
+  display: inline-block;
+  padding: 12px 22px;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.2s ease;
+}
+
+.error-404__button:hover {
+  background: #333;
 }
