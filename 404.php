@@ -6,7 +6,7 @@
 
         <img
             class="error-404__image"
-            src="<?php echo get_template_directory_uri(); ?>/assets/images/404-image.svg"
+            src="<?php echo get_template_directory_uri(); ?>/assets/images/illustrations/404-image.svg"
             alt="Page not found illustration">
 
         <h1 class="error-404__title">Page not found</h1>

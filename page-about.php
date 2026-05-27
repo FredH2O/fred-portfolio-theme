@@ -17,13 +17,18 @@ get_header();
         <section class="about-intro">
             <div class="about-image-container">
                 <?php if (has_post_thumbnail()) : ?>
-                    <?php echo the_post_thumbnail('full') ?>
+                    <?php the_post_thumbnail('full'); ?>
                 <?php endif; ?>
             </div>
             <div class="dummy-div"></div>
             <div class="about-me">
+
                 <p class="intro">
-                    I’m a self-taught web developer focused on building clean, responsive, and user-centered digital experiences. I enjoy turning ideas into structured, maintainable code while continuously refining my skills through real-world projects and hands-on learning.</p>
+                    I’m a self-taught web developer focused on building clean, responsive, and user-centered digital experiences. I enjoy turning ideas into structured, maintainable code while continuously refining my skills through real-world projects and hands-on learning.
+                </p>
+
+                <img class="about-illustrations" src="<?php echo get_template_directory_uri(); ?>/assets/images/illustrations/about-me.svg" alt="About Me Illustration">
+
                 <p class="intro">
                     Along my journey as a self-taught developer, I’ve embraced every challenge as an opportunity to grow. From building small personal projects to contributing to real-world websites, I’ve learned the importance of thoughtful design, attention to detail, and creating experiences that are both functional and enjoyable. I value clean code, collaboration, and continuous learning, and I strive to bring these principles into every project I take on.
                 </p>
@@ -36,6 +41,9 @@ get_header();
         <section class="about-journey">
             <div class="container">
                 <h2>What I’m Building, Learning & <span style="color: var(--color-accent); font-style: italic;">Voluntary</span> Work</h2>
+
+                <img class="about-illustrations" src="<?php echo get_template_directory_uri() ?>/assets/images/illustrations/building-work.svg" alt="Focus Illustration">
+
                 <p>
                     My current focus is front-end development within the WordPress ecosystem..
                     building custom themes, working with PHP templates, and structuring reusable components. I enjoy creating clean layouts, improving performance, and ensuring responsive design across devices.
@@ -53,6 +61,8 @@ get_header();
         <section class="about-values">
 
             <h2>What I <span style="color: var(--color-accent); font-style: italic;">Value</span></h2>
+            <img class="about-illustrations" src="<?php echo get_template_directory_uri() ?>/assets/images/illustrations/value.svg" alt="Value Illustration">
+
             <ul>
                 <li><strong>Clean Architecture:</strong> Structured, reusable code that scales and remains maintainable over time.</li>
                 <li><strong>User-Centered Design:</strong> Interfaces that prioritize clarity, accessibility, and intuitive interaction.</li>

@@ -190,7 +190,7 @@
   align-items: center;
   min-height: 100vh;
   overflow: hidden;
-  padding: 5rem 0;
+  padding: 1rem 0;
 }
 
 .about-page h1 {
@@ -240,10 +240,16 @@
   padding: 1rem;
 }
 
+.container {
+  width: min(90%, 1200px);
+  margin: 0 auto;
+}
+
 .about-journey .container {
   display: flex;
   color: #fff;
   flex-direction: column;
+  justify-content: center;
   text-align: center;
   gap: 1rem;
 }
@@ -297,6 +303,15 @@
   animation: slideIn 0.5s ease-in-out forwards;
 }
 
+.about-illustrations {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+}
+
 @keyframes slideIn {
   from {
     transform: translateY(-10px);
@@ -313,6 +328,11 @@
 }
 
 .about-values {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
   max-width: 800px;
   margin: 3rem auto;
   padding: 2rem;
