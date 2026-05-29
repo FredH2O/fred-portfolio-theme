@@ -18,39 +18,33 @@ global $wp_query;
     </div>
 
     <div class="learning-content-container">
+
+        <?php
+
+        $learning_items = [
+            ['icon' => '🧑‍💻', 'label' => 'WordPress Theme Development', 'pct' => 85],
+            ['icon' => '🪝', 'label' => 'PHP & WordPress Hooks', 'pct' => 60],
+            ['icon' => '📃', 'label' => 'Custom Post Types & ACF', 'pct' => 60],
+            ['icon' => '🏪', 'label' => 'SEO & E-Commerce Optimization', 'pct' => 40],
+        ];
+
+        ?>
         <div class="learning-current">
-            <h2>What I'm Currently Learning</h2>
+            <h2>Currently Learning</h2>
 
-            <div class="learning-progress">
+            <?php foreach ($learning_items as $item) : ?>
                 <div class="learning-item">
-                    <span>WordPress Theme Development 🧑‍💻</span>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 80%;"></div>
-                    </div>
-                </div>
 
-                <div class="learning-item">
-                    <span>PHP and WordPress Hooks 🪝</span>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 60%;"></div>
-                    </div>
-                </div>
+                    <span class="learning-item-icon"><?php echo $item['icon']; ?></span>
+                    <span><?php echo esc_html($item['label']); ?></span>
 
-                <div class="learning-item">
-                    <span>Custom Post Types & ACF 📃</span>
                     <div class="progress-bar">
-                        <div class="progress-fill" style="width: 60%;"></div>
+                        <div class="progress-fill" style="width: <?php echo $item['pct'] ?>%"></div>
                     </div>
+                    <span class="progress-pct"><?php echo $item['pct'] ?>%</span>
                 </div>
+            <?php endforeach ?>
 
-                <div class="learning-item">
-                    <span>SEO & E-Commerce Optimization 🏪</span>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 40%;"></div>
-                    </div>
-                </div>
-
-            </div>
         </div>
 
         <?php if (have_posts()) : ?>
