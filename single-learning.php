@@ -119,7 +119,7 @@
     }
 
     if ($tech_stack) {
-        echo '<h3>Tech Stack</h3>';
+        echo '<h3>What I used while learning</h3>';
         echo '<div class="tech-stack-container">';
 
         for ($i = 1; $i <= 5; $i++) :

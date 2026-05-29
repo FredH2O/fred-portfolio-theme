@@ -40,7 +40,10 @@
                             <a href="<?php the_permalink() ?>" class="project-link">
                                 <?php if (has_post_thumbnail()) : ?>
                                     <div class="project-thumbnail">
-                                        <?php the_post_thumbnail('full'); ?>
+                                        <?php the_post_thumbnail('full', [
+                                            'loading' => 'lazy',
+                                            'decoding' => 'async',
+                                        ]); ?>
                                     </div>
                                 <?php endif; ?>
 
@@ -97,7 +100,11 @@
 
             </div>
         </div>
+
         <nav class="pagination-projects">
+
+            <?php global $wp_query; ?>
+
             <?php echo paginate_links([
                 'total' => $wp_query->max_num_pages,
                 'prev_text' => '← Previous',
@@ -105,6 +112,7 @@
                 'before_page_number' => '',
                 'after_page_number' => '',
             ]); ?>
+
         </nav>
 
     </div>

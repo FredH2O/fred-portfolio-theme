@@ -48,6 +48,28 @@
             if ($challenges) : ?>
                 <?php echo esc_html($challenges); ?>
             <?php endif; ?>
+
+            <h2>What I used to build something real</h2>
+
+            <?php
+            $tech = get_field('tech');
+
+            if ($tech) :
+
+                $tech_items = explode(",", $tech);
+
+            ?>
+                <div class="project-tech-stack">
+
+                    <?php foreach ($tech_items as $item) : ?>
+
+                        <span class="tech-badge">
+                            <?php echo esc_html(trim($item)) ?>
+                        </span>
+
+                    <?php endforeach; ?>
+                </div>
+            <?php endif; ?>
         </div>
 
         <div class="project-call-to-action">
@@ -63,6 +85,7 @@
 
             <?php endif; ?>
         </div>
+
 
     </div>
 

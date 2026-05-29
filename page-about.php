@@ -7,7 +7,7 @@ get_header();
     <h1>About <span style="color: var(--color-accent); font-style: italic;">Me</span></h1>
 
     <div class="about-page-background">
-        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/circle-scatter.svg" alt="">
+        <img loading="lazy" src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/circle-scatter.svg" alt="">
     </div>
 
     <div class="about-page-shade"></div>
@@ -17,17 +17,16 @@ get_header();
         <section class="about-intro">
             <div class="about-image-container">
                 <?php if (has_post_thumbnail()) : ?>
-                    <?php the_post_thumbnail('full'); ?>
+                    <?php the_post_thumbnail('full', ['loading' => 'lazy']); ?>
                 <?php endif; ?>
             </div>
             <div class="dummy-div"></div>
             <div class="about-me">
+                <img class="about-illustrations" src="<?php echo get_template_directory_uri(); ?>/assets/images/illustrations/about-me.svg" alt="About Me Illustration">
 
                 <p class="intro">
                     I’m a self-taught web developer focused on building clean, responsive, and user-centered digital experiences. I enjoy turning ideas into structured, maintainable code while continuously refining my skills through real-world projects and hands-on learning.
                 </p>
-
-                <img class="about-illustrations" src="<?php echo get_template_directory_uri(); ?>/assets/images/illustrations/about-me.svg" alt="About Me Illustration">
 
                 <p class="intro">
                     Along my journey as a self-taught developer, I’ve embraced every challenge as an opportunity to grow. From building small personal projects to contributing to real-world websites, I’ve learned the importance of thoughtful design, attention to detail, and creating experiences that are both functional and enjoyable. I value clean code, collaboration, and continuous learning, and I strive to bring these principles into every project I take on.
@@ -79,15 +78,15 @@ get_header();
 
             <h2>Technologies I <span style="color: var(--color-accent); font-style: italic;">Work</span> With</h2>
             <div class="tech-icons-container">
-                <img src="<?php echo get_template_directory_uri() . '/assets/images/HTML5.svg' ?>" alt="HTML5" title="HTML5">
-                <img src="<?php echo get_template_directory_uri() . '/assets/images/CSS3.svg' ?>" alt="CSS3" title="CSS3">
-                <img src="<?php echo get_template_directory_uri() . '/assets/images/JavaScript.svg' ?>" alt="JavaScript" title="JavaScript">
-                <img src="<?php echo get_template_directory_uri() . '/assets/images/PHP.svg' ?>" alt="PHP" title="PHP">
-                <img src="<?php echo get_template_directory_uri() . '/assets/images/WordPress.svg' ?>" alt="WordPress" title="WordPress">
-                <img src="<?php echo get_template_directory_uri() . '/assets/images/Git.svg' ?>" alt="Git" title="Git">
-                <img src="<?php echo get_template_directory_uri() . '/assets/images/React.svg' ?>" alt="React" title="React">
-                <img src="<?php echo get_template_directory_uri() . '/assets/images/TailwindCSS.svg' ?>" alt="Tailwind" title="Tailwind">
-                <img src="<?php echo get_template_directory_uri() . '/assets/images/VSCode.svg' ?>" alt="VSCode" title="VSCode">
+                <img src="<?php echo get_template_directory_uri() . '/assets/images/tech-icons/HTML5.svg' ?>" alt="HTML5" title="HTML5">
+                <img src="<?php echo get_template_directory_uri() . '/assets/images/tech-icons/CSS3.svg' ?>" alt="CSS3" title="CSS3">
+                <img src="<?php echo get_template_directory_uri() . '/assets/images/tech-icons/JavaScript.svg' ?>" alt="JavaScript" title="JavaScript">
+                <img src="<?php echo get_template_directory_uri() . '/assets/images/tech-icons/PHP.svg' ?>" alt="PHP" title="PHP">
+                <img src="<?php echo get_template_directory_uri() . '/assets/images/tech-icons/WordPress.svg' ?>" alt="WordPress" title="WordPress">
+                <img src="<?php echo get_template_directory_uri() . '/assets/images/tech-icons/Git.svg' ?>" alt="Git" title="Git">
+                <img src="<?php echo get_template_directory_uri() . '/assets/images/tech-icons/React.svg' ?>" alt="React" title="React">
+                <img src="<?php echo get_template_directory_uri() . '/assets/images/tech-icons/TailwindCSS.svg' ?>" alt="Tailwind" title="Tailwind">
+                <img src="<?php echo get_template_directory_uri() . '/assets/images/tech-icons/VSCode.svg' ?>" alt="VSCode" title="VSCode">
             </div>
 
         </section>

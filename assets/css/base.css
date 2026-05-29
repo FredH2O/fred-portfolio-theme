@@ -18,6 +18,10 @@ Reset / Normaliza
   --color-border: #e2e8f0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .dark-mode {
   --color-primary: #f8fafc;
   --color-secondary: #94a3b8;
@@ -81,6 +85,7 @@ body {
     background-color 0.25s ease,
     color 0.25s ease,
     border-color 0.25s ease;
+  opacity: 1;
 }
 
 h1,

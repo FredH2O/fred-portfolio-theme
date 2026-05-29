@@ -35,6 +35,7 @@ function fred_enqueue_styles()
     );
 }
 add_action('wp_enqueue_scripts', 'fred_enqueue_styles');
+
 function fred_portfolio_menus()
 {
     register_nav_menu('primary', __('Primary Menu', 'fred-portfolio'));
